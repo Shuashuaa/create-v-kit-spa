@@ -70,4 +70,4 @@ import { MyButton } from "@shuashuaa/vuetify-kit";
 
 ## License
 
-[MIT](./LICENSE) License &copy; 2024-PRESENT [Shuashuaa](https://github.com/antfu)
+[MIT](./LICENSE) License &copy; 2024-PRESENT [Shuashuaa](https://github.com/Shuashuaa)
