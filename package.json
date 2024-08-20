@@ -1,0 +1,35 @@
+{
+  "name": "@viktor-luna/vue-kit-3",
+  "version": "0.0.2",
+  "type": "module",
+  "description": "...",
+  "author": "JJT",
+  "license": "ISC",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/ui-library.umd.cjs",
+  "exports": {
+    ".": {
+      "import": "./dist/ui-library.js",
+      "require": "./dist/ui-library.umd.cjs"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@mdi/font": "^7.4.47",
+    "particles.js": "^2.0.0",
+    "vite-plugin-vuetify": "^2.0.4",
+    "vue": "^3.4.37",
+    "vuetify": "^3.7.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.2",
+    "vite": "^5.4.1"
+  }
+}
