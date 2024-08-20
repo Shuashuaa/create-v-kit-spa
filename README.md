@@ -55,19 +55,59 @@ import { MyButton } from "@shuashuaa/vuetify-kit";
 
 # Login Props
 
-- :bgColor
-- :bgImg
-- :cardColor
-- :title
-- :subTitle
-- :userTitle
-- :passwordTitle
-- :userModel
-- :passwordModel
-- :btnColor
-- :btnTitle
-- :btnFunc
+### BACKGROUND
+- BgColor
+- BgImg
+
+## CARD
+- isLoading
+
+## CARD LEFT
+- cardColorL
+### Title icon (System Icon defaukt)
+- titleIcon
+- titleIconColor
+### Title (System name default)
+- Title
+- TitleColor
+### Version (0.0.1 default)
+- version
+- versionColor
+### Subtitle (make something interesting default)
+- subtitleName
+- subtitleColor
+### Particles JS
+- boolean if clickable or not
+### Card Powered by Note
+- PoweredByTitle (Integrated HRD Systems default)
+- PoweredByColor (Black default)
+
+## CARD RIGHT
+- cardColorR
+### welcome note
+- WelcomeNoteColor
+### login note
+- subNoteNoteColor
+### Input
+- UserNameInput
+- PasswordInput
+### Button
+- ButtonColor
+- ButtonTitle
+- ButtonIcon
+
+### GENERAL
+- FontFamily
+
+### CREATE .npmrc
+
+npm login
+npm config ls -l
+get the .npmrc file where the commands throw it
+paste it to your app
 
 ## License
 
 [MIT](./LICENSE) License &copy; 2024-PRESENT [Shuashuaa](https://github.com/Shuashuaa)
+
+catch, must support HTML references. ex. "I'm <b>Ironman</b>"
