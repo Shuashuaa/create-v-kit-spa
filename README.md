@@ -7,10 +7,7 @@
 <h1 align="center">@shuashuaa/v-kit</h1>
 
 <p align="center">
-An all in one login setup, of course authentication is on you though
-</p>
-<p align="center">
-A scaffolding tool for a Vue.js-Vuetify login template component with localStorage using Pinia and routing with Vue Router.
+An all in one login scaffolding tool setup for a Vue.js-Vuetify login <br> template component with localStorage using Pinia and routing with Vue Router.
 </p>
 
 <p align="center">
