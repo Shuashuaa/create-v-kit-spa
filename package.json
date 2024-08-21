@@ -1,18 +1,18 @@
 {
-  "name": "@viktor-luna/vue-kit-3",
-  "version": "0.0.2",
+  "name": "@shuashuaa/v-kit",
+  "version": "0.0.1",
   "type": "module",
-  "description": "...",
-  "author": "JJT",
+  "description": "A scaffolding tool for a Vue.js login template component with localStorage using Pinia and routing with Vue Router.",
+  "author": "Jovi Joshua Tania",
   "license": "ISC",
   "files": [
     "dist"
   ],
-  "main": "./dist/ui-library.umd.cjs",
+  "main": "./dist/shuashuaa-vkit.umd.cjs",
   "exports": {
     ".": {
-      "import": "./dist/ui-library.js",
-      "require": "./dist/ui-library.umd.cjs"
+      "import": "./dist/shuashuaa-vkit.js",
+      "require": "./dist/shuashuaa-vkit.umd.cjs"
     },
     "./style.css": "./dist/style.css"
   },
