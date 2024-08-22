@@ -1,6 +1,6 @@
 {
   "name": "@shuashuaa/v-kit",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "type": "module",
   "description": "A scaffolding tool for a Vue.js login template component with localStorage using Pinia and routing with Vue Router.",
   "author": "Jovi Joshua Tania",

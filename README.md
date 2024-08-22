@@ -1,7 +1,7 @@
 <br>
 
 <p align="center">
-<img src="./@shuashuaa-v-kit.png" width="300" />
+<img src="https://github.com/Shuashuaa/v-kit/blob/main/@shuashuaa-v-kit.png" width="300" />
 </p>
 
 <h1 align="center">@shuashuaa/v-kit</h1>
@@ -63,20 +63,18 @@ import { LoginKit } from "@shuashuaa/v-kit";
 
 # Props
 
-| Command                   | Action                                               | Syntax                                            |
-| :------------------------ | :--------------------------------------------------- | :------------------------------------------------ |
-| `titleName`               | Changes the default title                            | String                                            |
-| `subtitleName`            | Changes the default subtitle                         | String                                            |
-| `version`                 | Changes the default version                          | String                                            |
-| `teamName`                | Changes the current @shuashuaa/v-kit teamName        | String                                            |
+| Command                   | Action                                               | Syntax & Resources                                                                                  |
+| :------------------------ | :--------------------------------------------------- | :-------------------------------------------------------------------------------------------------- |
+| `titleName`               | Changes the default title                            | String                                                                                              |
+| `subtitleName`            | Changes the default subtitle                         | String                                                                                              |
+| `version`                 | Changes the default version                          | String                                                                                              |
+| `teamName`                | Changes the current @shuashuaa/v-kit teamName        | String                                                                                              |
 | `icon`                    | Changes the default icon ( mdi-your-icon-of-choice ) | <a href="https://github.com/Shuashuaa](https://pictogrammers.com/library/mdi/">mdi icon library</a> |
-| `bgColor`                 | Changes the background color                         | HEX (#ffffff) or just words 'blue, red, etc.'     |
-
-## On-Going Props
-
-- [ ] FontFamily - Changes the entire font-family
-- [ ] Popup notifications on login
-- [ ] and more..
+| `lCardColor`              | Changes the left card background color               | HEX (#ffffff) or just words 'blue, red, etc.'                                                       |
+| `rCardColor`              | Changes the right card background color              | HEX (#ffffff) or just words 'blue, red, etc.'                                                       |
+| `loginColor`              | Changes the login button's color                     | HEX (#ffffff) or just words 'blue, red, etc.'                                                       |
+| `loginName`               | Changes the login button's name                      | String                                                                                              |
+| `loginIcon`               | Changes the login button's icon                      | <a href="https://github.com/Shuashuaa](https://pictogrammers.com/library/mdi/">mdi icon library</a> |
 
 ## License
 
