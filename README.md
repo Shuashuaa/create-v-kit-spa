@@ -63,14 +63,14 @@ import { LoginKit } from "@shuashuaa/v-kit";
 
 # Props
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `titleName`               | Changes the default title                        |
-| `subtitleName`            | Changes the default subtitle                     |
-| `version`                 | Changes the default version                      |
-| `teamName`                | Changes the current @shuashuaa/v-kit teamName    |
-| `icon`                    | Changes the default icon                         |
-| `bgColor`                 | Changes the background color                     |
+| Command                   | Action                                               | Syntax                                            |
+| :------------------------ | :--------------------------------------------------- | :------------------------------------------------ |
+| `titleName`               | Changes the default title                            | String                                            |
+| `subtitleName`            | Changes the default subtitle                         | String                                            |
+| `version`                 | Changes the default version                          | String                                            |
+| `teamName`                | Changes the current @shuashuaa/v-kit teamName        | String                                            |
+| `icon`                    | Changes the default icon ( mdi-your-icon-of-choice ) | <a href="https://github.com/Shuashuaa](https://pictogrammers.com/library/mdi/">mdi icon library</a> |
+| `bgColor`                 | Changes the background color                         | HEX (#ffffff) or just words 'blue, red, etc.'     |
 
 ## On-Going Props
 
