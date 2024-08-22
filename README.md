@@ -56,6 +56,10 @@ import { LoginKit } from "@shuashuaa/v-kit";
 </template>
 
 ```
+<br>
+
+> [!IMPORTANT]  
+> Remove the `assets` folder from `src` as well as the `import path` in `main.js` file
 
 # Props
 
@@ -71,7 +75,8 @@ import { LoginKit } from "@shuashuaa/v-kit";
 ## On-Going Props
 
 - [ ] FontFamily - Changes the entire font-family
-- [ ] Etc
+- [ ] Popup notifications on login
+- [ ] and more..
 
 ## License
 
