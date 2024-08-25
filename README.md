@@ -7,7 +7,7 @@
 <h1 align="center">@shuashuaa/v-kit</h1>
 
 <p align="center">
-An all in one login scaffolding tool setup for a Vue.js-Vuetify login <br> template component with localStorage using Pinia and routing with Vue Router.
+An all in one login scaffolding page setup for a Vue.js-Vuetify <br> with localStorage using Pinia and routing with Vue Router.
 </p>
 
 <p align="center">
@@ -25,15 +25,25 @@ npm install @shuashuaa/v-kit --force
 
 ### main.js
 ```
-import { createApp } from 'vue'
-import App from './App.vue'
-
-import { vuetify } from "@shuashuaa/v-kit";
 import "@shuashuaa/v-kit/style.css";
+import { LoginKit } from "@shuashuaa/v-kit";
 import 'vuetify/styles'
 
+import { createVuetify } from 'vuetify'
+import * as components from 'vuetify/components'
+import * as directives from 'vuetify/directives'
+
+const vuetifyMain = createVuetify({
+  components,
+  directives,
+  icons: {
+    defaultSet: 'mdi',
+  },
+})
+
 createApp(App)
-.use(vuetify)
+.use(LoginKit)
+.use(vuetifyMain)
 .mount('#app')
 ```
 
@@ -72,11 +82,22 @@ import { LoginKit } from "@shuashuaa/v-kit";
 | `icon`                    | Changes the default icon ( mdi-your-icon-of-choice ) | <a href="https://github.com/Shuashuaa](https://pictogrammers.com/library/mdi/">mdi icon library</a> |
 | `lCardColor`              | Changes the left card background color               | HEX (#ffffff) or just words 'blue, red, etc.'                                                       |
 | `rCardColor`              | Changes the right card background color              | HEX (#ffffff) or just words 'blue, red, etc.'                                                       |
-| `loginColor`              | Changes the login button's color                     | HEX (#ffffff) or just words 'blue, red, etc.'                                                       |
-| `loginName`               | Changes the login button's name                      | String                                                                                              |
-| `loginIcon`               | Changes the login button's icon                      | <a href="https://github.com/Shuashuaa](https://pictogrammers.com/library/mdi/">mdi icon library</a> |
+| `btnColor`                | Changes the login button's color                     | HEX (#ffffff) or just words 'blue, red, etc.'                                                       |
+| `btnName`                 | Changes the login button's name                      | String                                                                                              |
+| `btnIcon`                 | Changes the login button's icon                      | <a href="https://github.com/Shuashuaa](https://pictogrammers.com/library/mdi/">mdi icon library</a> |
+
+## On-Going Props
+
+- [ ] fontFamily - Changes the font-family of a specific content
+- [ ] fontStyle - Changes the font-style of a specific content
+- [ ] toRoute - What page route to land if login is successful
+- [ ] toPop - Popup notifications on login
+    - [ ] alert methods ( success, warning, error, info )
+    - [ ] alert title
+- [ ] template-type - classic, minimalist, verbose, etc.
+- [ ] htmx features for customization
+- [ ] and more..
 
 ## License
 
 [MIT](./LICENSE) License &copy; 2024-PRESENT [Shuashuaa](https://github.com/Shuashuaa)
-
