@@ -88,14 +88,14 @@ import { LoginKit } from "@shuashuaa/v-kit";
 
 ## On-Going Props
 
-- [ ] fontFamily - Changes the font-family of a specific content
-- [ ] fontStyle - Changes the font-style of a specific content
 - [ ] toRoute - What page route to land if login is successful
-- [ ] toPop - Popup notifications on login
+- [ ] pop - Popup notifications on login
     - [ ] alert methods ( success, warning, error, info )
     - [ ] alert title
 - [ ] template-type - classic, minimalist, verbose, etc.
-- [ ] htmx features for customization
+- [ ] ${htmx? / v-html} features for customization
+- [ ] fontFamily - Changes the font-family of a specific content
+- [ ] fontStyle - Changes the font-style of a specific content
 - [ ] and more..
 
 ## License
