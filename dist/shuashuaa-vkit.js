@@ -1,4 +1,4 @@
-import { watch as K, onScopeDispose as tt, effectScope as ui, Fragment as le, reactive as mt, computed as y, watchEffect as $e, toRefs as fn, capitalize as Fn, shallowRef as G, isVNode as Bc, Comment as Dc, unref as ot, warn as Oa, getCurrentInstance as pc, ref as j, inject as ye, provide as Ae, defineComponent as Ec, camelize as gr, h as jt, toRaw as _e, createVNode as u, mergeProps as N, onBeforeUnmount as nt, readonly as si, onDeactivated as hr, onActivated as Mc, onMounted as at, nextTick as we, TransitionGroup as ci, Transition as Ht, isRef as Bn, toRef as M, onBeforeMount as yr, withDirectives as De, resolveDirective as ct, vShow as wt, onUpdated as $c, Text as Fc, resolveDynamicComponent as Lc, markRaw as Oc, Teleport as Rc, cloneVNode as Nc, createTextVNode as Je, onUnmounted as zc, onBeforeUpdate as Hc, withModifiers as uo, toDisplayString as Nt, vModelText as Wc, resolveComponent as jc, render as br, openBlock as Sr, createBlock as Yc, withCtx as Xt, createElementVNode as Oe, createElementBlock as Gc, createApp as Uc } from "vue";
+import { watch as K, onScopeDispose as tt, effectScope as ui, Fragment as le, reactive as mt, computed as y, watchEffect as $e, toRefs as fn, capitalize as Fn, shallowRef as G, isVNode as Bc, Comment as Dc, unref as ot, warn as Oa, getCurrentInstance as pc, ref as j, inject as ye, provide as Ae, defineComponent as Ec, camelize as gr, h as jt, toRaw as _e, createVNode as u, mergeProps as N, onBeforeUnmount as nt, readonly as si, onDeactivated as hr, onActivated as Mc, onMounted as at, nextTick as we, TransitionGroup as ci, Transition as Ht, isRef as Bn, toRef as M, onBeforeMount as yr, withDirectives as De, resolveDirective as ct, vShow as wt, onUpdated as $c, Text as Fc, resolveDynamicComponent as Lc, markRaw as Oc, Teleport as Rc, cloneVNode as Nc, createTextVNode as Je, onUnmounted as zc, onBeforeUpdate as Hc, withModifiers as uo, toDisplayString as Dt, vModelText as Wc, resolveComponent as jc, render as br, openBlock as Sr, createBlock as Yc, withCtx as Xt, createElementVNode as Oe, createElementBlock as Gc, createApp as Uc } from "vue";
 function rt(e, n) {
   let t;
   function a() {
@@ -615,13 +615,13 @@ const To = /^(?<fn>(?:rgb|hsl)a?)\((?<values>.+)\)/, Vd = {
     l: t,
     a
   }),
-  hsv: (e, n, t, a) => Dt({
+  hsv: (e, n, t, a) => pt({
     h: e,
     s: n,
     v: t,
     a
   }),
-  hsva: (e, n, t, a) => Dt({
+  hsva: (e, n, t, a) => pt({
     h: e,
     s: n,
     v: t,
@@ -652,14 +652,14 @@ function gt(e) {
     if (Qt(e, ["r", "g", "b"]))
       return e;
     if (Qt(e, ["h", "s", "l"]))
-      return Dt(bi(e));
+      return pt(bi(e));
     if (Qt(e, ["h", "s", "v"]))
-      return Dt(e);
+      return pt(e);
   }
   throw new TypeError(`Invalid color: ${e == null ? e : String(e) || e.constructor.name}
 Expected #hex, #hexa, rgb(), rgba(), hsl(), hsla(), object or number`);
 }
-function Dt(e) {
+function pt(e) {
   const {
     h: n,
     s: t,
@@ -677,7 +677,7 @@ function Dt(e) {
   };
 }
 function Bo(e) {
-  return Dt(bi(e));
+  return pt(bi(e));
 }
 function Ha(e) {
   if (!e) return {
@@ -735,7 +735,7 @@ function Mr(e) {
   return l === void 0 ? `rgb(${n}, ${t}, ${a})` : `rgba(${n}, ${t}, ${a}, ${l})`;
 }
 function $r(e) {
-  return Mr(Dt(e));
+  return Mr(pt(e));
 }
 function Ca(e) {
   const n = Math.round(e).toString(16);
@@ -765,7 +765,7 @@ function Or(e) {
   return Ha(n);
 }
 function Rr(e) {
-  return Fr(Dt(e));
+  return Fr(pt(e));
 }
 function Pd(e) {
   return e.startsWith("#") && (e = e.slice(1)), e = e.replace(/([^0-9a-f])/gi, "F"), (e.length === 3 || e.length === 4) && (e = e.split("").map((n) => n + n).join("")), e.length !== 6 && (e = mo(mo(e, 6), 8, "F")), e;
@@ -3479,7 +3479,7 @@ const oa = {
   ...ee(),
   ...Te(),
   ...Ct()
-}, "VImg"), pt = O()({
+}, "VImg"), Et = O()({
   name: "VImg",
   directives: {
     intersect: oa
@@ -3785,7 +3785,7 @@ const vf = [null, "prominent", "default", "comfortable", "compact"], du = D({
               src: e.image
             }
           }
-        }, t.image) : u(pt, {
+        }, t.image) : u(Et, {
           key: "image-img",
           cover: !0,
           src: e.image
@@ -4491,7 +4491,7 @@ const Pf = D({
   bottom: "top",
   left: "right",
   right: "left"
-}, Ft = D({
+}, Lt = D({
   location: String
 }, "location");
 function wn(e) {
@@ -4560,7 +4560,7 @@ const If = D({
   striped: Boolean,
   roundedBar: Boolean,
   ...ee(),
-  ...Ft({
+  ...Lt({
     location: "top"
   }),
   ...Te(),
@@ -4958,7 +4958,7 @@ function $f(e, n) {
   const t = hu(n.oldValue);
   xu(e, n, t);
 }
-const Lt = {
+const Ot = {
   mounted: Ef,
   unmounted: Mf,
   updated: $f
@@ -4993,7 +4993,7 @@ const Lt = {
   ...je(),
   ...kn(),
   ...Xa(),
-  ...Ft(),
+  ...Lt(),
   ...On(),
   ...Te(),
   ...ca(),
@@ -5140,7 +5140,7 @@ const Lt = {
             width: "2"
           }, null)])];
         }
-      }), [[Lt, !B.value && e.ripple, "", {
+      }), [[Ot, !B.value && e.ripple, "", {
         center: !!e.icon
       }]]);
     }), {
@@ -5208,7 +5208,7 @@ const Lt = {
   ...Ye(),
   ...Ne(),
   ...je(),
-  ...Ft(),
+  ...Lt(),
   ...On(),
   ...Te(),
   ...ve(),
@@ -5399,7 +5399,7 @@ const Lt = {
         }
       }, {
         default: () => [t.default()]
-      }) : e.image ? u(pt, {
+      }) : e.image ? u(Et, {
         key: "image",
         src: e.image,
         alt: "",
@@ -5569,7 +5569,7 @@ function Yf(e) {
 const Wt = O()({
   name: "VSelectionControl",
   directives: {
-    Ripple: Lt
+    Ripple: Ot
   },
   inheritAttrs: !1,
   props: Ja(),
@@ -5689,7 +5689,7 @@ const Wt = O()({
     falseIcon: "$checkboxOff",
     trueIcon: "$checkboxOn"
   })
-}, "VCheckboxBtn"), Et = O()({
+}, "VCheckboxBtn"), Mt = O()({
   name: "VCheckboxBtn",
   props: Iu(),
   emits: {
@@ -5791,7 +5791,7 @@ const Gf = D({
   focused: Boolean,
   "onUpdate:focused": Ge()
 }, "focus");
-function Ot(e) {
+function Rt(e) {
   let n = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : At();
   const t = ae(e, "focused"), a = y(() => ({
     [`${n}--focused`]: t.value
@@ -6026,7 +6026,7 @@ function Du(e) {
     validationClasses: h
   };
 }
-const Rt = D({
+const Nt = D({
   id: String,
   appendIcon: re,
   centerAffix: {
@@ -6057,7 +6057,7 @@ const Rt = D({
 }, "VInput"), Xe = O()({
   name: "VInput",
   props: {
-    ...Rt()
+    ...Nt()
   },
   emits: {
     "update:modelValue": (e) => !0
@@ -6147,7 +6147,7 @@ const Rt = D({
     };
   }
 }), qf = D({
-  ...Rt(),
+  ...Nt(),
   ...Re(Iu(), ["inline"])
 }, "VCheckbox"), Xf = O()({
   name: "VCheckbox",
@@ -6166,9 +6166,9 @@ const Rt = D({
       isFocused: i,
       focus: o,
       blur: r
-    } = Ot(e), s = Ue(), c = y(() => e.id || `checkbox-${s}`);
+    } = Rt(e), s = Ue(), c = y(() => e.id || `checkbox-${s}`);
     return R(() => {
-      const [d, f] = Yt(t), m = Xe.filterProps(e), v = Et.filterProps(e);
+      const [d, f] = Yt(t), m = Xe.filterProps(e), v = Mt.filterProps(e);
       return u(Xe, N({
         class: ["v-checkbox", e.class]
       }, d, m, {
@@ -6187,7 +6187,7 @@ const Rt = D({
             isReadonly: k,
             isValid: A
           } = b;
-          return u(Et, N(v, {
+          return u(Mt, N(v, {
             id: h.value,
             "aria-describedby": g.value,
             disabled: S.value,
@@ -6610,7 +6610,7 @@ const Mu = Symbol.for("vuetify:v-slide-group"), pi = D({
 }, "VChip"), zn = O()({
   name: "VChip",
   directives: {
-    Ripple: Lt
+    Ripple: Ot
   },
   props: nm(),
   emits: {
@@ -7446,10 +7446,10 @@ const Ei = (e) => {
   ...bt({
     variant: "text"
   })
-}, "VListItem"), Mt = O()({
+}, "VListItem"), $t = O()({
   name: "VListItem",
   directives: {
-    Ripple: Lt
+    Ripple: Ot
   },
   props: hm(),
   emits: {
@@ -7797,7 +7797,7 @@ const Ei = (e) => {
             };
             return t.header ? t.header({
               props: g
-            }) : u(Mt, g, d);
+            }) : u($t, g, d);
           },
           default: () => u(Gu, {
             items: o,
@@ -7805,7 +7805,7 @@ const Ei = (e) => {
           }, t)
         }) : t.item ? t.item({
           props: r
-        }) : u(Mt, N(r, {
+        }) : u($t, N(r, {
           value: e.returnObject ? c : r.value
         }), d);
       }));
@@ -9351,7 +9351,7 @@ const as = D({
       isFocused: s,
       focus: c,
       blur: d
-    } = Ot(e), {
+    } = Rt(e), {
       InputIcon: f
     } = _u(e), {
       roundedClasses: m
@@ -9551,9 +9551,9 @@ const Jm = ["color", "file", "time", "date", "datetime-local", "week", "month"],
     default: "text"
   },
   modelModifiers: Object,
-  ...Rt(),
+  ...Nt(),
   ...ma()
-}, "VTextField"), $t = O()({
+}, "VTextField"), Ft = O()({
   name: "VTextField",
   directives: {
     Intersect: oa
@@ -9576,7 +9576,7 @@ const Jm = ["color", "file", "time", "date", "datetime-local", "week", "month"],
       isFocused: o,
       focus: r,
       blur: s
-    } = Ot(e), c = y(() => typeof e.counterValue == "function" ? e.counterValue(i.value) : typeof e.counterValue == "number" ? e.counterValue : (i.value ?? "").toString().length), d = y(() => {
+    } = Rt(e), c = y(() => typeof e.counterValue == "function" ? e.counterValue(i.value) : typeof e.counterValue == "number" ? e.counterValue : (i.value ?? "").toString().length), d = y(() => {
       if (t.maxlength) return t.maxlength;
       if (!(!e.counter || typeof e.counter != "number" && typeof e.counter != "string"))
         return e.counter;
@@ -10187,8 +10187,8 @@ const Hi = D({
     }), K(() => e.items, (L, $) => {
       s.value || g.value && !$.length && L.length && (s.value = !0);
     }), R(() => {
-      const L = !!(e.chips || t.chip), $ = !!(!e.hideNoData || _.value.length || t["prepend-item"] || t["append-item"] || t["no-data"]), E = m.value.length > 0, U = $t.filterProps(e), oe = E || !g.value && e.label && !e.persistentPlaceholder ? void 0 : e.placeholder;
-      return u($t, N({
+      const L = !!(e.chips || t.chip), $ = !!(!e.hideNoData || _.value.length || t["prepend-item"] || t["append-item"] || t["no-data"]), E = m.value.length > 0, U = Ft.filterProps(e), oe = E || !g.value && e.label && !e.persistentPlaceholder ? void 0 : e.placeholder;
+      return u(Ft, N({
         ref: l
       }, U, {
         modelValue: m.value.map((te) => te.props.value).join(", "),
@@ -10244,7 +10244,7 @@ const Hi = D({
           }, w, e.listProps), {
             default: () => {
               var te, se, H;
-              return [(te = t["prepend-item"]) == null ? void 0 : te.call(t), !_.value.length && !e.hideNoData && (((se = t["no-data"]) == null ? void 0 : se.call(t)) ?? u(Mt, {
+              return [(te = t["prepend-item"]) == null ? void 0 : te.call(t), !_.value.length && !e.hideNoData && (((se = t["no-data"]) == null ? void 0 : se.call(t)) ?? u($t, {
                 title: a(e.noDataText)
               }, null)), u(al, {
                 ref: o,
@@ -10267,14 +10267,14 @@ const Hi = D({
                     item: ie,
                     index: he,
                     props: q
-                  })) ?? u(Mt, N(q, {
+                  })) ?? u($t, N(q, {
                     role: "option"
                   }), {
                     prepend: (Y) => {
                       let {
                         isSelected: Q
                       } = Y;
-                      return u(le, null, [e.multiple && !e.hideSelected ? u(Et, {
+                      return u(le, null, [e.multiple && !e.hideSelected ? u(Mt, {
                         key: ie.value,
                         modelValue: Q,
                         ripple: !1,
@@ -10603,8 +10603,8 @@ const ug = D({
     }), K(() => e.items, (q, fe) => {
       f.value || i.value && !fe.length && q.length && (f.value = !0);
     }), R(() => {
-      const q = !!(!e.hideNoData || T.value.length || t["prepend-item"] || t["append-item"] || t["no-data"]), fe = V.value.length > 0, Y = $t.filterProps(e);
-      return u($t, N({
+      const q = !!(!e.hideNoData || T.value.length || t["prepend-item"] || t["append-item"] || t["no-data"]), fe = V.value.length > 0, Y = Ft.filterProps(e);
+      return u(Ft, N({
         ref: l
       }, Y, {
         modelValue: _.value,
@@ -10658,7 +10658,7 @@ const ug = D({
           }, Z, e.listProps), {
             default: () => {
               var Q, ce, ue;
-              return [(Q = t["prepend-item"]) == null ? void 0 : Q.call(t), !T.value.length && !e.hideNoData && (((ce = t["no-data"]) == null ? void 0 : ce.call(t)) ?? u(Mt, {
+              return [(Q = t["prepend-item"]) == null ? void 0 : Q.call(t), !T.value.length && !e.hideNoData && (((ce = t["no-data"]) == null ? void 0 : ce.call(t)) ?? u($t, {
                 title: a(e.noDataText)
               }, null)), u(al, {
                 ref: c,
@@ -10682,14 +10682,14 @@ const ug = D({
                     item: Pe,
                     index: it,
                     props: Vt
-                  })) ?? u(Mt, N(Vt, {
+                  })) ?? u($t, N(Vt, {
                     role: "option"
                   }), {
                     prepend: (Kt) => {
                       let {
                         isSelected: qt
                       } = Kt;
-                      return u(le, null, [e.multiple && !e.hideSelected ? u(Et, {
+                      return u(le, null, [e.multiple && !e.hideSelected ? u(Mt, {
                         key: Pe.value,
                         modelValue: qt,
                         ripple: !1,
@@ -10804,7 +10804,7 @@ const ug = D({
   offsetY: [Number, String],
   textColor: String,
   ...ee(),
-  ...Ft({
+  ...Lt({
     location: "top end"
   }),
   ...Te(),
@@ -10913,7 +10913,7 @@ const ug = D({
     mobile: null
   }),
   ...je(),
-  ...Ft(),
+  ...Lt(),
   ...On(),
   ...Te(),
   ...ve(),
@@ -11579,7 +11579,7 @@ const ug = D({
   ...Ne(),
   ...je(),
   ...Xa(),
-  ...Ft(),
+  ...Lt(),
   ...On(),
   ...Te(),
   ...ca(),
@@ -11591,7 +11591,7 @@ const ug = D({
 }, "VCard"), Yn = O()({
   name: "VCard",
   directives: {
-    Ripple: Lt
+    Ripple: Ot
   },
   props: Ig(),
   setup(e, n) {
@@ -11650,7 +11650,7 @@ const ug = D({
                 src: e.image
               }
             }
-          }, a.image) : u(pt, {
+          }, a.image) : u(Et, {
             key: "image-img",
             cover: !0,
             src: e.image
@@ -12104,11 +12104,11 @@ const ji = {
       attrs: a
     } = n;
     R(() => {
-      const l = pt.filterProps(e), i = un.filterProps(e);
+      const l = Et.filterProps(e), i = un.filterProps(e);
       return u(un, N({
         class: ["v-carousel-item", e.class]
       }, i), {
-        default: () => [u(pt, N(a, l), t)]
+        default: () => [u(Et, N(a, l), t)]
       });
     });
   }
@@ -12277,7 +12277,7 @@ function Hg(e, n) {
   }
   if (typeof n == "object") {
     let t;
-    return Qt(n, ["r", "g", "b"]) ? t = Dt(e) : Qt(n, ["h", "s", "l"]) ? t = Er(e) : Qt(n, ["h", "s", "v"]) && (t = e), zg(t, !Qt(n, ["a"]) && e.a === 1);
+    return Qt(n, ["r", "g", "b"]) ? t = pt(e) : Qt(n, ["h", "s", "l"]) ? t = Er(e) : Qt(n, ["h", "s", "v"]) && (t = e), zg(t, !Qt(n, ["a"]) && e.a === 1);
   }
   return e;
 }
@@ -12333,7 +12333,7 @@ const Tn = {
       a: Number(n)
     })
   }],
-  to: Dt,
+  to: pt,
   from: Ha
 };
 var mr;
@@ -12729,7 +12729,7 @@ const ks = D({
 }, "VSliderThumb"), Zl = O()({
   name: "VSliderThumb",
   directives: {
-    Ripple: Lt
+    Ripple: Ot
   },
   props: Xg(),
   emits: {
@@ -12938,7 +12938,7 @@ const ks = D({
 }), Jg = D({
   ...da(),
   ...ks(),
-  ...Rt(),
+  ...Nt(),
   modelValue: {
     type: [Number, String],
     default: 0
@@ -12997,7 +12997,7 @@ const ks = D({
       isFocused: k,
       focus: A,
       blur: _
-    } = Ot(e), V = y(() => h(r.value));
+    } = Rt(e), V = y(() => h(r.value));
     return R(() => {
       const P = Xe.filterProps(e), B = !!(e.label || t.label || t.prepend);
       return u(Xe, N({
@@ -13505,7 +13505,7 @@ const Vh = dt({
   ...ee(),
   ...Ne(),
   ...je(),
-  ...Ft(),
+  ...Lt(),
   ...On(),
   ...Te(),
   ...ve(),
@@ -13873,8 +13873,8 @@ const Ah = D({
     }), K(() => e.items, (Y, Q) => {
       m.value || o.value && !Q.length && Y.length && (m.value = !0);
     }), R(() => {
-      const Y = !!(!e.hideNoData || z.value.length || a["prepend-item"] || a["append-item"] || a["no-data"]), Q = P.value.length > 0, ce = $t.filterProps(e);
-      return u($t, N({
+      const Y = !!(!e.hideNoData || z.value.length || a["prepend-item"] || a["append-item"] || a["no-data"]), Q = P.value.length > 0, ce = Ft.filterProps(e);
+      return u(Ft, N({
         ref: i
       }, ce, {
         modelValue: C.value,
@@ -13928,7 +13928,7 @@ const Ah = D({
           }, $, e.listProps), {
             default: () => {
               var ue, de, Pe;
-              return [(ue = a["prepend-item"]) == null ? void 0 : ue.call(a), !z.value.length && !e.hideNoData && (((de = a["no-data"]) == null ? void 0 : de.call(a)) ?? u(Mt, {
+              return [(ue = a["prepend-item"]) == null ? void 0 : ue.call(a), !z.value.length && !e.hideNoData && (((de = a["no-data"]) == null ? void 0 : de.call(a)) ?? u($t, {
                 title: l(e.noDataText)
               }, null)), u(al, {
                 ref: d,
@@ -13952,14 +13952,14 @@ const Ah = D({
                     item: Ie,
                     index: Vt,
                     props: Kt
-                  })) ?? u(Mt, N(Kt, {
+                  })) ?? u($t, N(Kt, {
                     role: "option"
                   }), {
                     prepend: (ya) => {
                       let {
                         isSelected: ba
                       } = ya;
-                      return u(le, null, [e.multiple && !e.hideSelected ? u(Et, {
+                      return u(le, null, [e.multiple && !e.hideSelected ? u(Mt, {
                         key: Ie.value,
                         modelValue: ba,
                         ripple: !1,
@@ -15557,7 +15557,7 @@ const js = D({
             allSelected: s.value,
             getSortIcon: h
           };
-          return t[F] ? t[F](z) : x.key === "data-table-select" ? ((W = t["header.data-table-select"]) == null ? void 0 : W.call(t, z)) ?? (d.value && u(Et, {
+          return t[F] ? t[F](z) : x.key === "data-table-select" ? ((W = t["header.data-table-select"]) == null ? void 0 : W.call(t, z)) ?? (d.value && u(Mt, {
             modelValue: s.value,
             indeterminate: r.value && !s.value,
             "onUpdate:modelValue": c
@@ -15694,7 +15694,7 @@ const js = D({
             indeterminate: h,
             "onUpdate:modelValue": g
           }
-        })) ?? u("td", null, [u(Et, {
+        })) ?? u("td", null, [u(Mt, {
           modelValue: b,
           indeterminate: h,
           "onUpdate:modelValue": g
@@ -15794,7 +15794,7 @@ const js = D({
           var T, C, I, p, F;
           if (t[A] && !l.value) return (T = t[A]) == null ? void 0 : T.call(t, V);
           if (g.key === "data-table-select")
-            return ((C = t["item.data-table-select"]) == null ? void 0 : C.call(t, V)) ?? u(Et, {
+            return ((C = t["item.data-table-select"]) == null ? void 0 : C.call(t, V)) ?? u(Mt, {
               disabled: !k.selectable,
               modelValue: i([k]),
               onClick: uo(() => o(k), ["stop"])
@@ -15806,7 +15806,7 @@ const js = D({
               variant: "text",
               onClick: uo(() => f(k), ["stop"])
             }, null);
-          const x = Nt(V.value);
+          const x = Dt(V.value);
           return l.value ? u(le, null, [u("div", {
             class: "v-data-table__td-title"
           }, [((p = t[_]) == null ? void 0 : p.call(t, P)) ?? g.title]), u("div", {
@@ -17605,7 +17605,7 @@ const ic = D({
         }
       }, {
         default: () => [a.media()]
-      }) : u(le, null, [e.image ? u(pt, {
+      }) : u(le, null, [e.image ? u(Et, {
         key: "image",
         src: e.image,
         height: h
@@ -17707,7 +17707,7 @@ const ic = D({
 }, "VExpansionPanelTitle"), ri = O()({
   name: "VExpansionPanelTitle",
   directives: {
-    Ripple: Lt
+    Ripple: Ot
   },
   props: cc(),
   setup(e, n) {
@@ -17911,7 +17911,7 @@ const ic = D({
     active: !0
   }), ["location"]),
   ...gn(),
-  ...Ft(),
+  ...Lt(),
   ...Ct({
     transition: "fab-transition"
   })
@@ -18002,7 +18002,7 @@ const ic = D({
     default: !1,
     validator: (e) => typeof e == "boolean" || [1e3, 1024].includes(Number(e))
   },
-  ...Rt({
+  ...Nt({
     prependIcon: "$file"
   }),
   modelValue: {
@@ -18035,7 +18035,7 @@ const ic = D({
       isFocused: r,
       focus: s,
       blur: c
-    } = Ot(e), d = y(() => typeof e.showSize != "boolean" ? e.showSize : void 0), f = y(() => (o.value ?? []).reduce((x, T) => {
+    } = Rt(e), d = y(() => typeof e.showSize != "boolean" ? e.showSize : void 0), f = y(() => (o.value ?? []).reduce((x, T) => {
       let {
         size: C = 0
       } = T;
@@ -19128,7 +19128,7 @@ const db = ["start", "end", "left", "right", "top", "bottom"], vb = D({
                 src: e.image
               }
             }
-          }, l.image) : u(pt, {
+          }, l.image) : u(Et, {
             key: "image-img",
             alt: "",
             cover: !0,
@@ -19215,7 +19215,7 @@ const db = ["start", "end", "left", "right", "top", "bottom"], vb = D({
       isFocused: o,
       focus: r,
       blur: s
-    } = Ot(e), c = ae(e, "modelValue", "", (w) => w == null ? [] : String(w).split(""), (w) => w.join("")), {
+    } = Rt(e), c = ae(e, "modelValue", "", (w) => w == null ? [] : String(w).split(""), (w) => w.join("")), {
       t: d
     } = Fe(), f = y(() => Number(e.length)), m = y(() => Array(f.value).fill(0)), v = j(-1), b = j(), h = j([]), g = y(() => h.value[v.value]);
     function S() {
@@ -19401,7 +19401,7 @@ const bb = D({
         v.style.setProperty("transform", `translateY(${A}px) scale(${_})`);
       }));
     }
-    return R(() => u(pt, {
+    return R(() => u(Et, {
       class: ["v-parallax", {
         "v-parallax--active": l.value
       }, e.class],
@@ -19438,7 +19438,7 @@ const bb = D({
     type: [Number, String],
     default: "auto"
   },
-  ...Rt(),
+  ...Nt(),
   ...Re(Di(), ["multiple"]),
   trueIcon: {
     type: re,
@@ -19513,7 +19513,7 @@ const bb = D({
   }
 }), Vb = D({
   ...da(),
-  ...Rt(),
+  ...Nt(),
   ...ks(),
   strict: Boolean,
   modelValue: {
@@ -19580,7 +19580,7 @@ const bb = D({
       isFocused: V,
       focus: P,
       blur: B
-    } = Ot(e), w = y(() => k(d.value[0])), x = y(() => k(d.value[1]));
+    } = Rt(e), w = y(() => k(d.value[0])), x = y(() => k(d.value[1]));
     return R(() => {
       const T = Xe.filterProps(e), C = !!(e.label || t.label || t.prepend);
       return u(Xe, N({
@@ -20017,7 +20017,7 @@ const Mb = D({
     default: 5e3
   },
   vertical: Boolean,
-  ...Ft({
+  ...Lt({
     location: "bottom"
   }),
   ...On(),
@@ -20653,7 +20653,7 @@ const gc = D({
 }, "VStepperItem"), Sc = O()({
   name: "VStepperItem",
   directives: {
-    Ripple: Lt
+    Ripple: Ot
   },
   props: Wb(),
   emits: {
@@ -20909,7 +20909,7 @@ const gc = D({
     type: [Boolean, String],
     default: !1
   },
-  ...Rt(),
+  ...Nt(),
   ...Ja()
 }, "VSwitch"), Xb = O()({
   name: "VSwitch",
@@ -20931,7 +20931,7 @@ const gc = D({
       isFocused: r,
       focus: s,
       blur: c
-    } = Ot(e), d = j(), f = xe && window.matchMedia("(forced-colors: active)").matches, m = y(() => typeof e.loading == "string" && e.loading !== "" ? e.loading : e.color), v = Ue(), b = y(() => e.id || `switch-${v}`);
+    } = Rt(e), d = j(), f = xe && window.matchMedia("(forced-colors: active)").matches, m = y(() => typeof e.loading == "string" && e.loading !== "" ? e.loading : e.color), v = Ue(), b = y(() => e.id || `switch-${v}`);
     function h() {
       l.value && (l.value = !1);
     }
@@ -21367,7 +21367,7 @@ const aS = D({
   },
   suffix: String,
   modelModifiers: Object,
-  ...Rt(),
+  ...Nt(),
   ...ma()
 }, "VTextarea"), oS = O()({
   name: "VTextarea",
@@ -21392,7 +21392,7 @@ const aS = D({
       isFocused: o,
       focus: r,
       blur: s
-    } = Ot(e), c = y(() => typeof e.counterValue == "function" ? e.counterValue(i.value) : (i.value || "").toString().length), d = y(() => {
+    } = Rt(e), c = y(() => typeof e.counterValue == "function" ? e.counterValue(i.value) : (i.value || "").toString().length), d = y(() => {
       if (t.maxlength) return t.maxlength;
       if (!(!e.counter || typeof e.counter != "number" && typeof e.counter != "string"))
         return e.counter;
@@ -21929,7 +21929,7 @@ const aS = D({
   VCarousel: $g,
   VCarouselItem: Lg,
   VCheckbox: Xf,
-  VCheckboxBtn: Et,
+  VCheckboxBtn: Mt,
   VChip: zn,
   VChipGroup: tm,
   VClassIcon: Vi,
@@ -21978,7 +21978,7 @@ const aS = D({
   VForm: Ny,
   VHover: Hy,
   VIcon: be,
-  VImg: pt,
+  VImg: Et,
   VInfiniteScroll: jy,
   VInput: Xe,
   VItem: Uy,
@@ -21992,7 +21992,7 @@ const aS = D({
   VList: el,
   VListGroup: Wl,
   VListImg: Vm,
-  VListItem: Mt,
+  VListItem: $t,
   VListItemAction: Im,
   VListItemMedia: Am,
   VListItemSubtitle: Wu,
@@ -22051,7 +22051,7 @@ const aS = D({
   VTabs: lS,
   VTabsWindow: Cc,
   VTabsWindowItem: Vc,
-  VTextField: $t,
+  VTextField: Ft,
   VTextarea: oS,
   VThemeProvider: uS,
   VTimeline: fS,
@@ -22206,14 +22206,14 @@ const TS = IS(Ic, (e) => {
   Intersect: oa,
   Mutate: kS,
   Resize: CS,
-  Ripple: Lt,
+  Ripple: Ot,
   Scroll: PS,
   Tooltip: TS,
   Touch: ji
-}, Symbol.toStringTag, { value: "Module" })), DS = { style: { display: "flex", gap: "5px" } }, pS = { style: { "margin-top": "-3px", "margin-left": "5px" } }, ES = { style: { "margin-top": "-2px", "font-size": "12px" } }, MS = /* @__PURE__ */ Oe("p", null, "-", -1), $S = { style: { "text-align": "center" } }, FS = { style: { "font-style": "italic" } }, LS = /* @__PURE__ */ Oe("div", null, " particle space ", -1), OS = { style: { "font-size": "12px" } }, RS = /* @__PURE__ */ Oe("div", null, [
+}, Symbol.toStringTag, { value: "Module" })), DS = { style: { display: "flex", gap: "5px" } }, pS = { style: { "margin-top": "-3px", "margin-left": "5px" } }, ES = { style: { "line-height": "1.1" } }, MS = { style: { "margin-top": "0px", "font-size": "12px" } }, $S = /* @__PURE__ */ Oe("p", null, "-", -1), FS = { style: { "text-align": "center" } }, LS = { style: { "font-style": "italic" } }, OS = /* @__PURE__ */ Oe("div", null, " particle space ", -1), RS = { style: { "font-size": "12px" } }, NS = /* @__PURE__ */ Oe("div", null, [
   /* @__PURE__ */ Oe("h2", null, "Welcome!"),
   /* @__PURE__ */ Oe("p", null, "Please login to continue")
-], -1), NS = /* @__PURE__ */ Oe("div", null, [
+], -1), zS = /* @__PURE__ */ Oe("div", null, [
   /* @__PURE__ */ Oe("p", null, [
     /* @__PURE__ */ Je("Don't have an Account? "),
     /* @__PURE__ */ Oe("a", { href: "" }, "Register"),
@@ -22224,16 +22224,21 @@ const TS = IS(Ic, (e) => {
     /* @__PURE__ */ Oe("a", { href: "" }, "Reset"),
     /* @__PURE__ */ Je(".")
   ])
-], -1), zS = {
+], -1), HS = {
   __name: "Login",
   props: {
+    // canvas
+    bgColor: { type: String, default: "#ffffff" },
+    // right card
+    lCardColor: { type: String, default: "#0c4b7e" },
     icon: { type: String, default: "mdi-airballoon-outline" },
     titleName: { type: String, default: "Title Here" },
     subtitleName: { type: String, default: "subtitle, make it interesting." },
-    teamName: { type: String, default: "@shuashuaa/v-kit" },
+    creditTitle: { type: String, default: "Powered By" },
+    creditName: { type: String, default: "@shuashuaa/v-kit" },
     version: { type: String, default: "0.0.1" },
-    bgColor: { type: String, default: "#ffffff" },
-    lCardColor: { type: String, default: "#0c4b7e" },
+    toRoute: { type: String, default: "/home", require: !0 },
+    // left card
     rCardColor: { type: String, default: "#ffffff" },
     loginColor: { type: String, default: "#0c4b7e" },
     loginName: { type: String, default: "Login" },
@@ -22266,25 +22271,25 @@ const TS = IS(Ic, (e) => {
                   Oe("div", DS, [
                     u(be, { size: "35" }, {
                       default: Xt(() => [
-                        Je(Nt(e.icon), 1)
+                        Je(Dt(e.icon), 1)
                       ]),
                       _: 1
                     }),
                     Oe("div", pS, [
-                      Oe("h3", null, Nt(e.titleName), 1),
-                      Oe("p", ES, "ver " + Nt(e.version), 1)
+                      Oe("h3", ES, Dt(e.titleName), 1),
+                      Oe("p", MS, "ver " + Dt(e.version), 1)
                     ])
                   ]),
-                  MS,
-                  Oe("h2", $S, [
-                    Oe("b", FS, '"' + Nt(e.subtitleName) + '".', 1)
+                  $S,
+                  Oe("h2", FS, [
+                    Oe("b", LS, '"' + Dt(e.subtitleName) + '".', 1)
                   ])
                 ]),
-                LS,
+                OS,
                 Oe("div", null, [
-                  Oe("p", OS, [
-                    Je("Powered By: "),
-                    Oe("b", null, Nt(e.teamName), 1)
+                  Oe("p", RS, [
+                    Je(Dt(e.creditTitle) + ": ", 1),
+                    Oe("b", null, Dt(e.creditName), 1)
                   ])
                 ])
               ]),
@@ -22296,16 +22301,16 @@ const TS = IS(Ic, (e) => {
               color: e.rCardColor
             }, {
               default: Xt(() => [
-                RS,
+                NS,
                 Oe("div", null, [
-                  u($t, {
+                  u(Ft, {
                     modelValue: t.value,
                     "onUpdate:modelValue": o[0] || (o[0] = (r) => t.value = r),
                     density: "compact",
                     label: "EmployeeID",
                     variant: "outlined"
                   }, null, 8, ["modelValue"]),
-                  u($t, {
+                  u(Ft, {
                     modelValue: a.value,
                     "onUpdate:modelValue": o[1] || (o[1] = (r) => a.value = r),
                     density: "compact",
@@ -22319,10 +22324,10 @@ const TS = IS(Ic, (e) => {
                     color: e.loginColor
                   }, {
                     default: Xt(() => [
-                      Je(Nt(e.loginName) + "  ", 1),
+                      Je(Dt(e.loginName) + "  ", 1),
                       u(be, null, {
                         default: Xt(() => [
-                          Je(Nt(e.loginIcon), 1)
+                          Je(Dt(e.loginIcon), 1)
                         ]),
                         _: 1
                       })
@@ -22330,7 +22335,7 @@ const TS = IS(Ic, (e) => {
                     _: 1
                   }, 8, ["color"])
                 ]),
-                NS
+                zS
               ]),
               _: 1
             }, 8, ["color"])
@@ -22341,11 +22346,11 @@ const TS = IS(Ic, (e) => {
       _: 1
     }, 16, ["color"]));
   }
-}, HS = {
+}, WS = {
   __name: "App",
   setup(e) {
     return (n, t) => (Sr(), Gc("div", null, [
-      u(zS, {
+      u(HS, {
         titleName: "Automated Server Fetching System",
         subtitleName: "Make your fetching smoother like no other",
         version: "1.0.0",
@@ -22353,21 +22358,21 @@ const TS = IS(Ic, (e) => {
       })
     ]));
   }
-}, WS = lu({
+}, jS = lu({
   components: bS,
   directives: BS,
   icons: {
     defaultSet: "mdi"
   }
 });
-Uc(HS).use(WS).mount("#app");
-const YS = {
+Uc(WS).use(jS).mount("#app");
+const GS = {
   install: (e) => {
     e.component("LoginKit");
   }
 };
 export {
-  zS as LoginKit,
-  YS as MyComponentLibrary,
-  WS as vuetify
+  HS as LoginKit,
+  GS as MyComponentLibrary,
+  jS as vuetify
 };
