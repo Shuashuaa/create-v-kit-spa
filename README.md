@@ -18,7 +18,7 @@ An all in one login scaffolding tool setup for a Vue.js-Vuetify login <br> templ
 ## Installation
 
 ```sh
-npm install @shuashuaa/vkit
+npm install @shuashuaa/v-kit
 ```
 
 ## Importation
@@ -28,8 +28,8 @@ npm install @shuashuaa/vkit
 import { createApp } from 'vue'
 import App from './App.vue'
 
-import { vuetify } from "@shuashuaa/vkit";
-import "@shuashuaa/vkit/style.css";
+import { vuetify } from "@shuashuaa/v-kit";
+import "@shuashuaa/v-kit/style.css";
 import 'vuetify/styles'
 
 createApp(App)
@@ -41,7 +41,7 @@ createApp(App)
 ### yourComponent.vue
 ```
 <script setup>
-import { LoginKit } from "@shuashuaa/vkit";
+import { LoginKit } from "@shuashuaa/v-kit";
 </script>
 
 <template>
@@ -74,7 +74,7 @@ import { LoginKit } from "@shuashuaa/vkit";
 | `subtitleName`            | Changes the default subtitle                         | String                                                                                              |
 | `version`                 | Changes the default version                          | String                                                                                              |
 | `creditTitle`             | Changes the current Powered By                       | String                                                                                              |
-| `creditName`              | Changes the current @shuashuaa/vkit teamName        | String                                                                                              |
+| `creditName`              | Changes the current @shuashuaa/v-kit teamName        | String                                                                                              |
 **RCARD**
 | `rCardColor`              | Changes the right card background color              | HEX (#ffffff) or just words 'blue, red, etc.'                                                       |
 | `loginColor`              | Changes the login button's color                     | HEX (#ffffff) or just words 'blue, red, etc.'                                                       |
