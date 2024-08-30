@@ -1,10 +1,17 @@
 {
-  "name": "@shuashuaa/vkit",
-  "version": "0.0.1",
+  "name": "@shuashuaa/v-kit",
+  "version": "0.1.0",
   "type": "module",
   "description": "An all in one login scaffolding tool setup for a Vue.js-Vuetify login template component with localStorage using Pinia and routing with Vue Router.",
-  "author": "Jovi Joshua Tania",
-  "license": "ISC",
+  "author": {
+    "name": "Jovi Joshua Tania",
+    "email": "jovijoshuatania027@gmail.com",
+    "url": "https://shuashuaa.netlify.app"
+  },
+  "license": "MIT",
+  "keywords": [
+    "vuetify-kit"
+  ],
   "files": [
     "dist"
   ],
