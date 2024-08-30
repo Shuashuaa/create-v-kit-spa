@@ -22364,13 +22364,12 @@ const TS = IS(Ic, (e) => {
   icons: {
     defaultSet: "mdi"
   }
-});
-Uc(WS).use(jS).mount("#app");
-const GS = {
+}), GS = {
   install: (e) => {
     e.component("LoginKit");
   }
 };
+Uc(WS).use(jS).mount("#app").unmount();
 export {
   HS as LoginKit,
   GS as MyComponentLibrary,
