@@ -92,7 +92,7 @@ import { LoginKit } from "@shuashuaa/v-kit";
 <br>
 
 > [!IMPORTANT]  
-> Remove the `assets` folder from `src` as well as the `import path` in `main.js` file
+> if new project from `npm create vue@latest` installation Remove the `assets` folder from `src` as well as the `import path` in `main.js` file
 
 # Props
 
