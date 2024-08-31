@@ -1,5 +1,5 @@
 {
-  "name": "@shuashuaa/v-kit",
+  "name": "@shuashuaa/vkit",
   "version": "0.1.0",
   "type": "module",
   "description": "An all in one login scaffolding tool setup for a Vue.js-Vuetify login template component with localStorage using Pinia and routing with Vue Router.",
