@@ -1,42 +1,21 @@
 {
-  "name": "@shuashuaa/vkit",
-  "version": "0.1.0",
+  "name": "my-first-generator",
   "type": "module",
-  "description": "An all in one login scaffolding tool setup for a Vue.js-Vuetify login template component with localStorage using Pinia and routing with Vue Router.",
-  "author": {
-    "name": "Jovi Joshua Tania",
-    "email": "jovijoshuatania027@gmail.com",
-    "url": "https://shuashuaa.netlify.app"
-  },
-  "license": "MIT",
-  "keywords": [
-    "vuetify-kit"
-  ],
-  "files": [
-    "dist"
-  ],
-  "main": "./dist/shuashuaa-vkit.umd.cjs",
-  "exports": {
-    ".": {
-      "import": "./dist/shuashuaa-vkit.js",
-      "require": "./dist/shuashuaa-vkit.umd.cjs"
-    },
-    "./style.css": "./dist/style.css"
-  },
+  "version": "1.0.0",
+  "main": "index.js",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "create": "node index.js"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
   "dependencies": {
-    "@mdi/font": "^7.4.47",
-    "particles.js": "^2.0.0",
-    "vite-plugin-vuetify": "^2.0.4",
-    "vue": "^3.4.37",
-    "vuetify": "^3.7.0"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-vue": "^5.1.2",
-    "vite": "^5.4.1"
+    "@vue/compiler-sfc": "^3.5.3",
+    "@vue/runtime-core": "^3.5.3",
+    "chalk": "^5.3.0",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "yargs": "^17.7.2"
   }
 }
