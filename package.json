@@ -1,15 +1,21 @@
 {
-  "name": "my-first-generator",
+  "name": "v-kit",
   "type": "module",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "create": "node index.js"
+    "v-kit": "node index.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "vue3",
+    "vite",
+    "vuetify3",
+    "vue-router",
+    "pinia-for-vuex"
+  ],
+  "author": "Jovi Joshua Tania",
   "license": "ISC",
-  "description": "",
+  "description": "a pre-built login boilerplate created with vue3, vuetify3, vue-router configuration and pinia for localStorage, fully customizable",
   "dependencies": {
     "@vue/compiler-sfc": "^3.5.3",
     "@vue/runtime-core": "^3.5.3",
