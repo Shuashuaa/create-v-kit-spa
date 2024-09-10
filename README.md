@@ -7,7 +7,7 @@
 <h1 align="center">@shuashuaa/v-kit</h1>
 
 <p align="center">
-An all in one login scaffolding tool setup for a <a href="https://vuejs.org/">Vuejs 3</a> and <a href="https://vuetifyjs.com/en/">Vuetify 3</a> login <br> template component with localStorage using Pinia and routing with Vue Router.
+A collection of vue-laravel templates with login and registration features on the go. powered by vue, laravel, vite, vuetify, pinia and crypto-js that is updated and fully customizable.
 </p>
 
 <p align="center">
