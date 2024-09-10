@@ -9,6 +9,7 @@
 <p align="center">
 A collection of vue-laravel templates with login and registration features on the go. powered by vue, laravel, vite/webpack, vuetify, pinia and crypto-js that is updated and fully customizable.
 <!-- Kickstart your next project with V-Kit: A Collection of Vue-tiful templates, Laravel-lous features, and so much more. efficient, totally customizable, and always ready for a project-breaking party! -->
+vee-kit, @vee-kit/core
 </p>
 
 <p align="center">
