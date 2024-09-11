@@ -1,0 +1,7 @@
+{
+    "comments.visible": true,
+    "comments.openView": "firstFile",
+    "editor.tokenColorCustomizations": {
+        "comments": "#8d8d8d"
+    }
+}
