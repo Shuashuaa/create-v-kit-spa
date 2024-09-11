@@ -1,27 +1,12 @@
 {
-  "name": "v-kit",
-  "type": "module",
-  "version": "1.0.0",
+  "name": "v-kit-spa",
+  "version": "0.0.1",
   "main": "index.js",
   "scripts": {
-    "v-kit": "node index.js"
+    "test": "node index.js"
   },
-  "keywords": [
-    "vue3",
-    "vite",
-    "vuetify3",
-    "vue-router",
-    "pinia-for-vuex"
-  ],
+  "keywords": [],
   "author": "Jovi Joshua Tania",
-  "license": "ISC",
-  "description": "a pre-built login boilerplate created with vue3, vuetify3, vue-router configuration and pinia for localStorage, fully customizable",
-  "dependencies": {
-    "@vue/compiler-sfc": "^3.5.3",
-    "@vue/runtime-core": "^3.5.3",
-    "chalk": "^5.3.0",
-    "fs": "^0.0.1-security",
-    "path": "^0.12.7",
-    "yargs": "^17.7.2"
-  }
+  "license": "MIT",
+  "description": "a vue-laravel spa boilerplate generator from hell"
 }
