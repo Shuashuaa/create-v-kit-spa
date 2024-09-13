@@ -4,7 +4,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "node index.js"
+    "test": "node index.js",
+    "build": "tsc -p tsconfig.json -outDir ./dist"
   },
   "keywords": [
     "vue-laravel-spa"
@@ -13,8 +14,6 @@
   "license": "MIT",
   "description": "a vue-laravel spa boilerplate generator from hell",
   "dependencies": {
-    "@vue/compiler-sfc": "^3.5.3",
-    "@vue/runtime-core": "^3.5.3",
     "fs": "^0.0.1-security",
     "path": "^0.12.7"
   }
