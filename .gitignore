@@ -1,5 +1,5 @@
 node_modules
-# default app
-v-kit
 
-091424-v0.0.2-tscompiler
+# default app
+v-kit-app
+package-lock.json
