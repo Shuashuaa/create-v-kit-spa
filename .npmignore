@@ -1,3 +1,4 @@
 node_modules
-DEV.md
-index.js
+# default app
+v-kit-app
+package-lock.json
