@@ -1,7 +1,7 @@
 <br>
 
 <p align="center">
-<img src="./@shuashuaa-v-kit.png" width="300" />
+<img src="https://github.com/Shuashuaa/v-kit/blob/main/@shuashuaa-v-kit.png" width="300" />
 </p>
 
 <h1 align="center">create-v-kit-spa</h1>
@@ -9,6 +9,7 @@
 <p align="center">
 A collection of vue-laravel-spa boilerplates Powered by vue, laravel, <br>
 vite/webpack, vuetify and pinia. up-to-date, ready for local-deployment and fully customizable.
+<!-- Looking for a boilerplate for your next project? Kickstart it with v-kit-spa now! -->
 </p>
 
 <p align="center">
@@ -30,5 +31,5 @@ vite/webpack, vuetify and pinia. up-to-date, ready for local-deployment and full
 ## Installation
 
 ```sh
-npm create v-kit-spa
+npm create v-kit-spa@latest
 ```
