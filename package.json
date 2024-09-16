@@ -2,7 +2,7 @@
   "name": "create-v-kit-spa",
   "version": "0.5.8",
   "main": "dist/index.js",
-  "description": "A collection of vue-laravel-spa boilerplates Powered by vue, laravel, vite/webpack, vuetify and pinia. up-to-date, ready for local-deployment and fully customizable.",
+  "description": "A simple way to start your Vue-Laravel-spa projects",
   "scripts": {
     "v-kit-test": "ts-node dist/index.js",
     "build": "tsc"
