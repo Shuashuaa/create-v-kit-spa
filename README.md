@@ -33,3 +33,7 @@ vite/webpack, vuetify and pinia. up-to-date, ready for local-deployment and full
 ```sh
 npm create v-kit-spa@latest
 ```
+
+## License
+
+[MIT](./LICENSE) License &copy; 2024-PRESENT [Shuashuaa](https://github.com/Shuashuaa)
