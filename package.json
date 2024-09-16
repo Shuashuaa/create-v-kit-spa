@@ -1,20 +1,41 @@
 {
-  "name": "v-kit-spa",
-  "version": "0.0.5",
-  "main": "index.js",
-  "type": "module",
+  "name": "create-v-kit-spa",
+  "version": "0.5.8",
+  "main": "dist/index.js",
+  "description": "A collection of vue-laravel-spa boilerplates Powered by vue, laravel, vite/webpack, vuetify and pinia. up-to-date, ready for local-deployment and fully customizable.",
   "scripts": {
-    "test": "node index.js",
-    "build": "tsc -p tsconfig.json -outDir ./dist"
+    "v-kit-test": "ts-node dist/index.js",
+    "build": "tsc"
+  },
+  "bin": {
+    "create-v-kit-spa": "dist/index.js"
   },
   "keywords": [
-    "vue-laravel-spa"
+    "vue-spa",
+    "laravel-spa",
+    "vue-laravel-spa",
+    "spa"
   ],
-  "author": "Jovi Joshua Tania",
-  "license": "MIT",
-  "description": "a vue-laravel spa boilerplate generator from hell",
+  "author": "Jovi Joshua Tania <jovijoshuatania027@gmail.com>",
+  "license": "ISC",
   "dependencies": {
+    "@vue/compiler-sfc": "^3.5.3",
+    "@vue/runtime-core": "^3.5.3",
+    "chalk": "^4.1.2",
     "fs": "^0.0.1-security",
-    "path": "^0.12.7"
-  }
+    "path": "^0.12.7",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "@types/yargs": "^17.0.33",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2"
+  },
+  "files": [
+    "dist",   
+    "template",                          
+    "index.d.ts",                    
+    "package.json",
+    "@shuashuaa-v-kit.png"
+  ]
 }
