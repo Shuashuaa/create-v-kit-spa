@@ -17,7 +17,7 @@
     "spa"
   ],
   "author": "Jovi Joshua Tania <jovijoshuatania027@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@vue/compiler-sfc": "^3.5.3",
     "@vue/runtime-core": "^3.5.3",
