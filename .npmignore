@@ -2,3 +2,4 @@ node_modules
 # default app
 v-kit-app
 package-lock.json
+src
