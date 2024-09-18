@@ -1,3 +1,3 @@
 #!/usr/bin/env node
-export {};
+import './commands';
 //# sourceMappingURL=index.d.ts.map
