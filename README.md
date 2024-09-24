@@ -28,11 +28,46 @@ vite/webpack, vuetify and pinia. up-to-date, ready for local-deployment and full
 
 <br>
 
-## Installation
+## Create your project
 
 ```sh
 npm create v-kit-spa@latest
 ```
+
+<br>
+
+## Prerequisite
+
+- `Apache/Nginx`
+- `Mysql`
+- `Php`
+- `Node`
+
+<br>
+
+# Installation
+
+## Vue 2 - Laravel 8
+
+> bundled and runs in `webpack`
+
+| Commands                  | Action                                       |
+| :------------------------ | :--------------------------------------------|
+| `npm install`             | Installs node dependencies                   |
+| `composer install`        | Installs composer dependencies               |
+| `copy .env.example .env`  | Generates a .env file from an example        |
+| `php artisan key:generate`| Generates a key for .env file                |
+| run `yarn watch` and `php artisan serve` | in a separate command lines   |
+| `http://127.0.0.1:8000/`  | Visit your app, Enjoy! 🎉🎉                 |
+
+<br>
+
+## On-Going
+
+- [ ] Vue 3 - Laravel 8
+- [ ] Vue 3 - Laravel 9
+- [ ] Vue 3 - Laravel 10
+- [ ] Vue 3 - Laravel 11
 
 ## License
 
