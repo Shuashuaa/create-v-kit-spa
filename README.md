@@ -7,8 +7,9 @@
 <h1 align="center">create-v-kit-spa</h1>
 
 <p align="center">
-A collection of vue-laravel-spa boilerplates Powered by vue, laravel, <br>
-vite/webpack, vuetify and pinia. up-to-date, ready for local-deployment and fully customizable.
+A simple way to start your Vue-Laravel-spa projects
+<!-- A collection of vue-laravel-spa boilerplates Powered by vue, laravel, <br>
+vite/webpack, vuetify and vuex/pinia. up-to-date, and fully customizable. -->
 <!-- Looking for a boilerplate for your next project? Kickstart it with v-kit-spa now! -->
 </p>
 
