@@ -13,7 +13,7 @@ function successMessage() {
     console.log(chalk_1.default.cyan.bold("        ˜                  |"));
     console.log(chalk_1.default.red.bold("    ()    .-.,='``'=.    - o -"));
     console.log(chalk_1.default.yellow.bold("          '=/_       〵    |"));
-    console.log(chalk_1.default.cyanBright.bold("       *   |  '=._    |"));
+    console.log(chalk_1.default.cyanBright.bold("       *   |  '=._     )"));
     console.log(chalk_1.default.yellow.bold("           \\      `=../`,        '"));
     console.log(chalk_1.default.redBright.bold("         .   '=.__.=' `='      *"));
     console.log(chalk_1.default.yellow.bold("˜                         +"));
@@ -37,12 +37,10 @@ function successMessage() {
     //             .   '=.__.=' `='      *
     //    +                         +
     //         o      *        '       .
-    console.log(chalk_1.default.green('A Boilerplates is created with coffee & passion by', chalk_1.default.green.bold.underline('Shuashuaa'), chalk_1.default.whiteBright('\nFor more info: >>'), chalk_1.default.green.underline('https://github.com/Shuashuaa/v-kit-spa\n')));
-    console.log('Well done 🎉🎉,\n');
-    console.log(chalk_1.default.bgBlack('Install Dependencies:'), chalk_1.default.cyanBright('npm install'), 'or', chalk_1.default.cyanBright('yarn install'), 'and', chalk_1.default.cyanBright('composer install') + '.');
-    console.log(chalk_1.default.bgBlack('Run Project:'), chalk_1.default.cyanBright('php artisan serve'));
-    console.log(chalk_1.default.bgBlack('And in a separated command line, Run', chalk_1.default.cyanBright('yarn watch') + '.\n'));
-    console.log('Visit:', chalk_1.default.underline('https://127.0.0.1:8000') + '.');
+    console.log('Well done 🎉🎉,', chalk_1.default.green('A Boilerplates is created with coffee & passion by', chalk_1.default.green.bold.underline('Shuashuaa'), chalk_1.default.whiteBright('\nFor more info: >>'), chalk_1.default.green.underline('https://github.com/Shuashuaa/v-kit-spa\n')));
+    console.log(chalk_1.default.bgBlack('Install Dependencies:'), chalk_1.default.cyanBright('npm install'), 'or', chalk_1.default.cyanBright('yarn install') + ',', chalk_1.default.cyanBright('\ncopy .env.example .env') + ',', chalk_1.default.cyanBright('php artisan key:generate'), 'and', chalk_1.default.cyanBright('composer install') + '.');
+    console.log(chalk_1.default.bgBlack('Run Project:'), chalk_1.default.cyanBright('npm run artisan-watch') + '.\n');
+    console.log(chalk_1.default.bgBlack('Visit:'), chalk_1.default.bold('http://127.0.0.1:8000\n'));
 }
 function errorMessage(error) {
     console.error(chalk_1.default.red.inverse(`\n✖ Error creating project. ${error.message}`));
