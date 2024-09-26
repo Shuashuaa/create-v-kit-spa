@@ -56,10 +56,23 @@ npm create v-kit-spa@latest
 
 # Reference Table
 
+### Mono Repo
+> frontend and backend are united via configuration made it an sfa, easier to deploy but migrating or upgrading either frontend or backend is tricky-hard.
+
 | Version & Type            | Structure    |             Features                                                  | Prerequisite      |
 | :------------------------ | :------------| :---------------------------------------------------------------------| :-----------------|
-| `vue 2 - laravel 8`       | Monorepo     | runs in `webpack` w/ the following: pinia/vuex, vuetify 2, vue-router | php `v7.4` && node `^18x` |
-| `vue 2 - laravel 8`       | `Decoupled`  | runs in `webpack` w/ the following: pinia/vuex, vuetify 2, vue-router | php `v7.4` && node `^18x` |
+| `vue 2 - laravel 8`       | `Monorepo`     | runs in `webpack` w/ the following: `pinia/vuex`, `vuetify 2`, `vue-router` | php `v7.4` && node `^18x` |
+| `vue 3 - laravel 8`       | `Monorepo`     | runs in `vite` w/ the following: `pinia`, `vuetify 3`, `vue-router`, `developer friendly` |php `v7.4` && node `^18x` |
+| `vue 3 - laravel 9`       | `Monorepo`     | runs in `vite` w/ the following: `pinia`, `vuetify 3`, `vue-router`, `developer friendly` |php `v8.0` && node `^18x` |
+<!-- | `vue 3 - laravel 10`       | Monorepo     | runs in `vite` w/ the following: `pinia`, `vuetify 3`, `vue-router`, `developer friendly` | php `v8.1` && node `v18^` |
+| `vue 3 - laravel 11`       | Monorepo     | runs in `vite` w/ the following: `pinia`, `vuetify 3`, `vue-router`, `developer friendly` | php `v8.2` && node `v18^` | -->
+
+### decoupled Repo
+> frontend and backend are separated, much easier to update/upgrade either if needed.
+
+| Version & Type            | Structure    |             Features                                                  | Prerequisite      |
+| :------------------------ | :------------| :---------------------------------------------------------------------| :-----------------|
+| `vue 3 - laravel 8`       | `Decoupled`  | runs in `vite` w/ the following: `pinia`, `vuetify 3`, `vue-router`, `developer friendly` |php `v7.4` && node `^18x` |
 <br>
 
 # Installation
@@ -67,6 +80,20 @@ npm create v-kit-spa@latest
 ## Vue 2 - Laravel 8
 
 > bundled and runs in `webpack`
+  
+| Commands                    | Action                                       |
+| :-------------------------- | :--------------------------------------------|
+| `npm install`               | Installs node dependencies                   |
+| `composer install`          | Installs composer dependencies               |
+| `copy .env.example .env`    | Generates a .env file from an example        |
+| `php artisan key:generate`  | Generates a key for .env file                |
+| `npm run artisan-watch`     | Run both yarn watch and php artisan serve    |
+| `http://127.0.0.1:8000/`    | Visit your app, Enjoy! 🎉🎉                 |
+<br>
+
+<!-- ## Vue 3 - Laravel 9
+
+> bundled and runs in `vite`
 
 | Commands                  | Action                                       |
 | :------------------------ | :--------------------------------------------|
@@ -74,9 +101,23 @@ npm create v-kit-spa@latest
 | `composer install`        | Installs composer dependencies               |
 | `copy .env.example .env`  | Generates a .env file from an example        |
 | `php artisan key:generate`| Generates a key for .env file                |
-| run `yarn watch` and `php artisan serve` | in a separate command lines   |
+| run `yarn dev` and `php artisan serve` | in a separate command line      |
 | `http://127.0.0.1:8000/`  | Visit your app, Enjoy! 🎉🎉                 |
 <br>
+
+## Docs
+Read full docs [here](https://github.com/Shuashuaa/v-kit-spa).
+
+## Contributors
+Thanks to:
+- [RGie](https://github.com/vrlara)
+
+> To learn on how to contribute, check the [Contributing](./CONTRIBUTING.md).
+<br>
+
+## Changelog
+To learn about the specific changes in each release, check the [Changelog](./Changelog).
+<br> -->
 
 ## License
 [MIT](./LICENSE) License &copy; 2024-PRESENT [Shuashuaa](https://github.com/Shuashuaa)
