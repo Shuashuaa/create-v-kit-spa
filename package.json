@@ -1,14 +1,13 @@
 {
   "name": "create-v-kit-spa",
-  "version": "0.7.1",
+  "version": "0.7.6",
   "main": "dist/index.js",
   "description": "A simple way to start your Vue-Laravel-spa projects",
   "repository": "Shuashuaa/v-kit-spa",
   "scripts": {
     "test": "ts-node dist/index.js",
     "test-dev": "ts-node src/index.ts",
-    "build": "tsc",
-    "deploy": "npm run build && npm run link && npm run link create-v-kit-spa && npm publish --access public"
+    "build": "tsc"
   },
   "bin": {
     "create-v-kit-spa": "dist/index.js"
