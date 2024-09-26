@@ -25,7 +25,14 @@ function createProject() {
         if (!projectName) {
             projectName = yield (0, prompts_1.getProjectName)();
         }
-        const sourcePath = path_1.default.join(__dirname, '../templates/158');
+        const boilerplateChoice = yield (0, prompts_1.getBoilerplateChoice)();
+        const templatePath = getTemplatePath(boilerplateChoice); // Replace with your template logic
+        if (!templatePath) {
+            (0, messages_1.errorMessage)(new Error('\n✖ Invalid boilerplate choice.'));
+            (0, prompts_1.closeReadline)();
+            return;
+        }
+        const sourcePath = path_1.default.join(__dirname, '../templates', templatePath);
         const destinationPath = path_1.default.join(process.cwd(), projectName);
         try {
             yield fs_1.default.promises.mkdir(destinationPath);
@@ -39,5 +46,21 @@ function createProject() {
             (0, prompts_1.closeReadline)();
         }
     });
+}
+function getTemplatePath(boilerplateChoice) {
+    switch (boilerplateChoice) {
+        case 1:
+            return '158';
+        case 2:
+            return '159';
+        case 3:
+            return '160';
+        case 4:
+            return '161';
+        case 5:
+            return '162';
+        default:
+            return null;
+    }
 }
 createProject();
