@@ -1853,8 +1853,8 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       drawer: false,
-      open: 'mdi-menu-open',
-      close: 'mdi-menu',
+      open: 'mdi-menu',
+      close: 'mdi-menu-open',
       items: [{
         text: 'Home',
         icon: 'mdi-home',
@@ -1986,7 +1986,7 @@ var render = function render() {
         _vm.drawer = !_vm.drawer;
       }
     }
-  }, [_c("v-icon", [_vm._v(_vm._s(_vm.drawer == false ? _vm.open : _vm.close))])], 1), _vm._v(" "), _c("v-toolbar-title", [_vm._v("Vue - Laravel SPA App")])], 1), _vm._v(" "), _c("v-main", {
+  }, [_c("v-icon", [_vm._v(_vm._s(_vm.drawer == false ? _vm.open : _vm.close))])], 1), _vm._v(" "), _c("v-toolbar-title", [_vm._v("Vue 2 - Laravel 8 SPA App")])], 1), _vm._v(" "), _c("v-main", {
     staticClass: "ma-2"
   }, [_c("router-view")], 1)], 1);
 };

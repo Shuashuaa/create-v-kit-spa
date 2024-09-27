@@ -1,13 +1,11 @@
-<br>
 
-# v-kit-spa app
-### Vuejs 2 - Laravel 8
+# v-kit-spa app 
 <a href="https://github.com/shuashuaa/v-kit/blob/main/LICENSE"><img src="https://img.shields.io/npm/v/create-v-kit-spa?style=flat-square&logo=npm&color=ffe963" alt="VERSION"></a>
 
+### This non-fancy boilerplate should help get you started developing with `Vue 2` and `Laravel 8`.
 <br>
 
-## Installation
-
+### Installation
 install node dependencies
 ```
 npm install
@@ -26,13 +24,13 @@ php artisan key:generate
 ```
 <br>
 
-## Run the Project
+### Run the Project
 ```
 npm run artisan-watch
 ```
 <br>
 
-## Visit your app
+### Visit your app
 ```
 http://127.0.0.1:8000/
 ```

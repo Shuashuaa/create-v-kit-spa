@@ -25,7 +25,7 @@
          <v-btn @click="drawer = !drawer" icon>
             <v-icon>{{drawer == false ? open : close }}</v-icon>
          </v-btn>
-         <v-toolbar-title>Vue - Laravel SPA App</v-toolbar-title>
+         <v-toolbar-title>Vue 2 - Laravel 8 SPA App</v-toolbar-title>
       </v-app-bar>
 
       <v-main class="ma-2">
@@ -38,8 +38,8 @@
 export default {
    data: () => ({ 
       drawer: false,
-      open: 'mdi-menu-open',
-      close: 'mdi-menu',
+      open: 'mdi-menu',
+      close: 'mdi-menu-open',
       items:[
          {text:'Home', icon:'mdi-home', to:'home'},
          {text:'About', icon:'mdi-information-variant', to:'about'}
