@@ -13,7 +13,7 @@ function successMessage() {
     console.log(chalk_1.default.cyan.bold("        ˜                  |"));
     console.log(chalk_1.default.red.bold("    ()    .-.,='``'=.    - o -"));
     console.log(chalk_1.default.yellow.bold("          '=/_       〵    |"));
-    console.log(chalk_1.default.cyanBright.bold("       *   |  '=._     )"));
+    console.log(chalk_1.default.cyanBright.bold("       *   |  '=._    |"));
     console.log(chalk_1.default.yellow.bold("           \\      `=../`,        '"));
     console.log(chalk_1.default.redBright.bold("         .   '=.__.=' `='      *"));
     console.log(chalk_1.default.yellow.bold("˜                         +"));
