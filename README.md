@@ -52,6 +52,9 @@ npm create v-kit-spa@latest
 | `8.1`           | `^10.0x`           |
 | `8.2`           | `^11.0x`           | -->
 
+<!-- Download PHP Versions
+https://windows.php.net/downloads/releases/archives/php-8.0.9-Win32-vs16-x64.zip -->
+
 <br>
 
 # Reference Table
@@ -67,19 +70,34 @@ npm create v-kit-spa@latest
 <!-- | `vue 3 - laravel 10`       | Monorepo     | runs in `vite` w/ the following: `pinia`, `vuetify 3`, `vue-router`, `developer friendly` | php `v8.1` && node `v18^` |
 | `vue 3 - laravel 11`       | Monorepo     | runs in `vite` w/ the following: `pinia`, `vuetify 3`, `vue-router`, `developer friendly` | php `v8.2` && node `v18^` | -->
 
-### decoupled Repo
+```
+/
+├── Project
+└── README.md
+```
+
+### Decoupled Repo
 > frontend and backend are separated, much easier to update/upgrade either if needed.
 
 | Version & Type            | Structure    |             Features                                                  | Prerequisite      |
 | :------------------------ | :------------| :---------------------------------------------------------------------| :-----------------|
 | `vue 3 - laravel 8`       | `Decoupled`  | runs in `vite` w/ the following: `pinia`, `vuetify 3`, `vue-router`, `developer friendly` |php `v7.4` && node `^18x` |
+
+```
+/
+├── FrontEnd
+├── Backend
+└── README.md
+```
 <br>
 
 # Installation
 
+<!-- [![cli-frames](http://i.imgur.com/RjY2kCn.gif)](#) -->
+
 ## Vue 2 - Laravel 8
 
-> bundled and runs in `webpack`
+> bundled and runs in `webpack` 🕸️
   
 | Commands                    | Action                                       |
 | :-------------------------- | :--------------------------------------------|
@@ -87,13 +105,13 @@ npm create v-kit-spa@latest
 | `composer install`          | Installs composer dependencies               |
 | `copy .env.example .env`    | Generates a .env file from an example        |
 | `php artisan key:generate`  | Generates a key for .env file                |
-| `npm run artisan-watch`     | Run both yarn watch and php artisan serve    |
+| `npm run artisan-watch`     | Run both `php artisan serve` and `yarn watch`|
 | `http://127.0.0.1:8000/`    | Visit your app, Enjoy! 🎉🎉                 |
 <br>
 
-<!-- ## Vue 3 - Laravel 9
+## Vue 3 - Laravel 9
 
-> bundled and runs in `vite`
+> bundled and runs in `vite` ⚡
 
 | Commands                  | Action                                       |
 | :------------------------ | :--------------------------------------------|
@@ -101,12 +119,15 @@ npm create v-kit-spa@latest
 | `composer install`        | Installs composer dependencies               |
 | `copy .env.example .env`  | Generates a .env file from an example        |
 | `php artisan key:generate`| Generates a key for .env file                |
-| run `yarn dev` and `php artisan serve` | in a separate command line      |
+| `npm run artisan-dev`     | Run both `php artisan serve` and `yarn dev`  |
 | `http://127.0.0.1:8000/`  | Visit your app, Enjoy! 🎉🎉                 |
 <br>
 
-## Docs
+<!-- ## Docs
 Read full docs [here](https://github.com/Shuashuaa/v-kit-spa).
+
+## How to contribute
+Have an idea? Found a bug? See [how to contribute][contributing].
 
 ## Contributors
 Thanks to:
