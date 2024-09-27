@@ -124,12 +124,12 @@ https://windows.php.net/downloads/releases/archives/php-8.0.9-Win32-vs16-x64.zip
 <br>
 
 <!-- ## Docs
-Read full docs [here](https://github.com/Shuashuaa/v-kit-spa).
+Read full docs [here](https://github.com/Shuashuaa/v-kit-spa). -->
 
 ## How to contribute
-Have an idea? Found a bug? See [how to contribute][contributing].
+Have an idea? Found a bug? See [how to contribute](./CONTRIBUTING).
 
-## Contributors
+<!--## Contributors
 Thanks to:
 - [RGie](https://github.com/vrlara)
 
