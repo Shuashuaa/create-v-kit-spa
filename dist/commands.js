@@ -32,7 +32,7 @@ function createProject() {
             (0, prompts_1.closeReadline)();
             return;
         }
-        const sourcePath = path_1.default.join(__dirname, '../templates', templatePath);
+        const sourcePath = path_1.default.join(__dirname, '../lib', templatePath);
         const destinationPath = path_1.default.join(process.cwd(), projectName);
         try {
             yield fs_1.default.promises.mkdir(destinationPath);
