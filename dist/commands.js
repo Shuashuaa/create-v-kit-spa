@@ -26,7 +26,7 @@ function createProject() {
             projectName = yield (0, prompts_1.getProjectName)();
         }
         const boilerplateChoice = yield (0, prompts_1.getBoilerplateChoice)();
-        const templatePath = getTemplatePath(boilerplateChoice); // Replace with your template logic
+        const templatePath = getTemplatePath(boilerplateChoice);
         if (!templatePath) {
             (0, messages_1.errorMessage)(new Error('\n✖ Invalid boilerplate choice.'));
             (0, prompts_1.closeReadline)();
@@ -37,7 +37,7 @@ function createProject() {
         try {
             yield fs_1.default.promises.mkdir(destinationPath);
             yield (0, utils_1.copyProjectStructure)(sourcePath, destinationPath);
-            (0, messages_1.successMessage)();
+            (0, messages_1.successMessage)(templatePath);
         }
         catch (error) {
             (0, messages_1.errorMessage)(error);
