@@ -109,7 +109,7 @@
   },
   "exclude": [
     "node_modules",
-    "./templates/**/*",
+    "lib/**/*",
     "dist"
   ]
 }
