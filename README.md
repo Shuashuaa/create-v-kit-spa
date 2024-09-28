@@ -123,11 +123,11 @@ https://windows.php.net/downloads/releases/archives/php-8.0.9-Win32-vs16-x64.zip
 | `http://127.0.0.1:8000/`  | Visit your app, Enjoy! 🎉🎉                 |
 <br>
 
-<!-- ## Docs
-Read full docs [here](https://github.com/Shuashuaa/v-kit-spa). -->
+## Docs
+Read full docs [here](https://github.com/Shuashuaa/v-kit-spa#readme).
 
 ## How to contribute
-Have an idea? Found a bug? See [how to contribute](./CONTRIBUTING).
+Have an idea? Found a bug? See [how to contribute](./CONTRIBUTING.md).
 
 <!--## Contributors
 Thanks to:
