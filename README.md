@@ -72,8 +72,9 @@ https://windows.php.net/downloads/releases/archives/php-8.0.9-Win32-vs16-x64.zip
 
 ```
 /
-├── Project
-└── README.md
+└── Project folder/
+    ├── *The rest of the files*
+    └── README.md
 ```
 
 ### Decoupled Repo
@@ -85,9 +86,10 @@ https://windows.php.net/downloads/releases/archives/php-8.0.9-Win32-vs16-x64.zip
 
 ```
 /
-├── FrontEnd
-├── Backend
-└── README.md
+├── FrontEnd/
+│   └── Vuejs files
+└── Backend/
+    └── Laravel files
 ```
 <br>
 
