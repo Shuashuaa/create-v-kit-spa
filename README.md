@@ -129,7 +129,7 @@ https://windows.php.net/downloads/releases/archives/php-8.0.9-Win32-vs16-x64.zip
 Read full docs [here](https://github.com/Shuashuaa/v-kit-spa#readme).
 
 ## How to contribute
-Have an idea? Found a bug? See [how to contribute](./CONTRIBUTING.md).
+Have an idea? Found a bug? See [how to contribute](https://github.com/Shuashuaa/v-kit-spa/wiki/Contributing).
 
 <!--## Contributors
 Thanks to:
