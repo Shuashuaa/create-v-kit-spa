@@ -143,4 +143,4 @@ To learn about the specific changes in each release, check the [Changelog](./Cha
 <br> -->
 
 ## License
-[MIT](./LICENSE) License &copy; 2024-PRESENT [Shuashuaa](https://github.com/Shuashuaa)
+v-kit-spa is OpenSource and licensed under the Terms of The [MIT](./LICENSE) License &copy; 2024-PRESENT [Shuashuaa](https://github.com/Shuashuaa)
