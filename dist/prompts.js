@@ -38,12 +38,12 @@ function getBoilerplateChoice() {
     return __awaiter(this, void 0, void 0, function* () {
         return new Promise((resolve) => {
             let message = `\n${chalk_1.default.bold.cyan('?')} ${chalk_1.default.bold('Select your preferred boilerplate:')}\n`;
-            message += `\n        MonoRepo:              Decoupled:\n`;
-            message += `[1] - ${chalk_1.default.bold.underline('Vue2-Laravel8')}  [6] - ${chalk_1.default.bold.underline.gray('Vue2-Laravel8')} ${chalk_1.default.gray.dim.italic('(on-going..)')}\n`;
-            message += `[2] - ${chalk_1.default.bold.underline('Vue3-Laravel8')}  [7] - ${chalk_1.default.bold.underline.gray('Vue3-Laravel8')} ${chalk_1.default.gray.dim.italic('(on-going..)')}\n`;
-            message += `[3] - ${chalk_1.default.bold.underline('Vue3-Laravel9')}  [8] - ${chalk_1.default.bold.underline.gray('Vue3-Laravel9')} ${chalk_1.default.gray.dim.italic('(on-going..)')}\n`;
-            message += `[4] - ${chalk_1.default.bold.underline.gray('Vue3-Laravel10')} ${chalk_1.default.gray.dim.italic('(on-going..)')}\n`;
-            message += `[5] - ${chalk_1.default.bold.underline.gray('Vue3-Laravel11')} ${chalk_1.default.gray.dim.italic('(on-going..)')}\n`;
+            message += `\nMonoRepo:                         Decoupled:\n`;
+            message += `[1] - ${chalk_1.default.bold.underline('Vue2-Laravel8')}               [6] - ${chalk_1.default.bold.underline.gray('Vue2-Laravel8')} ${chalk_1.default.gray.dim.italic('(on-going..)')}\n`;
+            message += `[2] - ${chalk_1.default.bold.underline.gray('Vue3-Laravel8')} ${chalk_1.default.gray.dim.italic('(on-going..)')}  [7] - ${chalk_1.default.bold.underline.gray('Vue3-Laravel8')} ${chalk_1.default.gray.dim.italic('(on-going..)')}\n`;
+            message += `[3] - ${chalk_1.default.bold.underline('Vue3-Laravel9')}               [8] - ${chalk_1.default.bold.underline.gray('Vue3-Laravel9')} ${chalk_1.default.gray.dim.italic('(on-going..)')}\n`;
+            message += `[4] - ${chalk_1.default.bold.underline('Vue3-Laravel10')}\n`;
+            message += `[5] - ${chalk_1.default.bold.underline('Vue3-Laravel11')}\n`;
             message += '=> ';
             readline.question(message, (answer) => {
                 resolve(parseInt(answer));
