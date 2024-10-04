@@ -121,7 +121,7 @@ https://windows.php.net/downloads/releases/archives/php-8.0.9-Win32-vs16-x64.zip
 | `composer install`        | Installs composer dependencies               |
 | `copy .env.example .env`  | Generates a .env file from an example        |
 | `php artisan key:generate`| Generates a key for .env file                |
-| `npm run artisan-watch`   | Run both `php artisan serve` and `yarn watch`  |
+| `npm run artisan-watch`   | Run both `php artisan serve` and `yarn watch`|
 | `http://127.0.0.1:8081/`  | Visit your app, Enjoy! 🎉🎉                 |
 <br>
 
