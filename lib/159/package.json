@@ -1,0 +1,28 @@
+{
+    "private": true,
+    "scripts": {
+        "prod": "npm run production",
+        "artisan-watch": "concurrently \"php artisan serve --port 8081\" \"mix watch\""
+    },
+    "devDependencies": {
+        "axios": "^0.19",
+        "cross-env": "^7.0",
+        "laravel-mix": "^6.0.6",
+        "lodash": "^4.17.19",
+        "postcss-custom-properties": "^12.1.8",
+        "resolve-url-loader": "^3.1.0",
+        "concurrently": "^9.0.1"
+
+    },
+    "dependencies": {
+        "@mdi/font": "^6.5.95",
+        "@vue/compiler-sfc": "^3.3.8",
+        "pinia": "^2.1.7",
+        "vue": "^3.2.36",
+        "vue-loader": "^17.3.1",
+        "vue-router": "4",
+        "vue-template-compiler": "^2.6.14",
+        "vuetify": "3.1.13"
+
+    }
+}
