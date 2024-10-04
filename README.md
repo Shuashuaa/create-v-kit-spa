@@ -111,6 +111,20 @@ https://windows.php.net/downloads/releases/archives/php-8.0.9-Win32-vs16-x64.zip
 | `http://127.0.0.1:8000/`    | Visit your app, Enjoy! 🎉🎉                 |
 <br>
 
+## Vue 3 - Laravel 8
+
+> bundled and optimized in `vite` ⚡
+
+| Commands                  | Action                                       |
+| :------------------------ | :--------------------------------------------|
+| `yarn install`            | Installs node dependencies                   |
+| `composer install`        | Installs composer dependencies               |
+| `copy .env.example .env`  | Generates a .env file from an example        |
+| `php artisan key:generate`| Generates a key for .env file                |
+| `npm run artisan-watch`   | Run both `php artisan serve` and `yarn watch`  |
+| `http://127.0.0.1:8081/`  | Visit your app, Enjoy! 🎉🎉                 |
+<br>
+
 ## Vue 3 - Laravel 9
 
 > bundled and optimized in `vite` ⚡
