@@ -1,5 +1,5 @@
 <br>
-    SAMPLE LANG TO
+
 <p align="center">
 <img src="https://github.com/Shuashuaa/v-kit/blob/main/@shuashuaa-v-kit.png" width="300" />
 </p>
