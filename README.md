@@ -65,7 +65,7 @@ https://windows.php.net/downloads/releases/archives/php-8.0.9-Win32-vs16-x64.zip
 | Version & Type            | Structure    |             Features                                                  | Prerequisite      |
 | :------------------------ | :------------| :---------------------------------------------------------------------| :-----------------|
 | `vue 2 - laravel 8`       | `Monorepo`     | runs in `webpack` w/ the following: `pinia/vuex`, `vuetify 2`, `vue-router` | php `v7.4` && node `^18x` |
-| `vue 3 - laravel 8`       | `Monorepo`     | runs in `vite` w/ the following: `pinia`, `vuetify 3`, `vue-router`                     |php `v7.4` && node `^18x` |
+| `vue 3 - laravel 8`       | `Monorepo`     | runs in `webpack` w/ the following: `pinia`, `vuetify 3`, `vue-router`                     |php `v7.4` && node `^18x` |
 | `vue 3 - laravel 9`       | `Monorepo`     | runs in `vite` w/ the following: `pinia`, `vuetify 3`, `vue-router`, `developer friendly` |php `v8.0` && node `^18x` |
 | `vue 3 - laravel 10`       | `Monorepo`     | runs in `vite` w/ the following: `pinia`, `vuetify 3`, `vue-router`, `developer friendly` | php `v8.1` && node `v18^` |
 | `vue 3 - laravel 11`       | `Monorepo`     | runs in `vite` w/ the following: `pinia`, `vuetify 3`, `vue-router`, `developer friendly` | php `v8.2^` && node `v18^` |
@@ -73,11 +73,11 @@ https://windows.php.net/downloads/releases/archives/php-8.0.9-Win32-vs16-x64.zip
 ```
 /
 └── Project folder/
-    ├── *The rest of the files*
+    ├── *Laravel and Vue files are combined here*
     └── README.md
 ```
 
-### Decoupled Repo
+<!-- ### Decoupled Repo
 > frontend and backend are separated, much easier to update/upgrade either if needed.
 
 | Version & Type            | Structure    |             Features                                                  | Prerequisite      |
@@ -91,6 +91,7 @@ https://windows.php.net/downloads/releases/archives/php-8.0.9-Win32-vs16-x64.zip
 └── Backend/
     └── Laravel files
 ```
+-->
 <br>
 
 # Installation
