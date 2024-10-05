@@ -77,7 +77,7 @@ https://windows.php.net/downloads/releases/archives/php-8.0.9-Win32-vs16-x64.zip
     └── README.md
 ```
 
-### Decoupled Repo
+<!-- ### Decoupled Repo
 > frontend and backend are separated, much easier to update/upgrade either if needed.
 
 | Version & Type            | Structure    |             Features                                                  | Prerequisite      |
@@ -90,7 +90,7 @@ https://windows.php.net/downloads/releases/archives/php-8.0.9-Win32-vs16-x64.zip
 │   └── Vuejs files
 └── Backend/
     └── Laravel files
-```
+``` -->
 <br>
 
 # Installation
