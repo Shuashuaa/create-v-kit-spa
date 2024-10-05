@@ -114,7 +114,7 @@ https://windows.php.net/downloads/releases/archives/php-8.0.9-Win32-vs16-x64.zip
 
 ## Vue 3 - Laravel 8
 
-> bundled and optimized in `vite` ⚡
+> bundled and optimized in `webpack` 🕸️
 
 | Commands                  | Action                                       |
 | :------------------------ | :--------------------------------------------|
@@ -175,12 +175,10 @@ Read full docs [here](https://github.com/Shuashuaa/v-kit-spa#readme).
 ## How to contribute
 Have an idea? Found a bug? See [how to contribute](https://github.com/Shuashuaa/v-kit-spa/wiki/Contributing).
 
-<!--## Contributors
+## Contributors
 Thanks to:
 - [RGie](https://github.com/vrlara)
-
-> To learn on how to contribute, check the [Contributing](./CONTRIBUTING.md).
-<br>
+<!-- <br>
 
 ## Changelog
 To learn about the specific changes in each release, check the [Changelog](./Changelog).
