@@ -65,7 +65,7 @@ https://windows.php.net/downloads/releases/archives/php-8.0.9-Win32-vs16-x64.zip
 | Version & Type            | Structure    |             Features                                                  | Prerequisite      |
 | :------------------------ | :------------| :---------------------------------------------------------------------| :-----------------|
 | `vue 2 - laravel 8`       | `Monorepo`     | runs in `webpack` w/ the following: `pinia/vuex`, `vuetify 2`, `vue-router` | php `v7.4` && node `^18x` |
-| `vue 3 - laravel 8`       | `Monorepo`     | runs in `vite` w/ the following: `pinia`, `vuetify 3`, `vue-router`                     |php `v7.4` && node `^18x` |
+| `vue 3 - laravel 8`       | `Monorepo`     | runs in `webpack` w/ the following: `pinia`, `vuetify 3`, `vue-router`                     |php `v7.4` && node `^18x` |
 | `vue 3 - laravel 9`       | `Monorepo`     | runs in `vite` w/ the following: `pinia`, `vuetify 3`, `vue-router`, `developer friendly` |php `v8.0` && node `^18x` |
 | `vue 3 - laravel 10`       | `Monorepo`     | runs in `vite` w/ the following: `pinia`, `vuetify 3`, `vue-router`, `developer friendly` | php `v8.1` && node `v18^` |
 | `vue 3 - laravel 11`       | `Monorepo`     | runs in `vite` w/ the following: `pinia`, `vuetify 3`, `vue-router`, `developer friendly` | php `v8.2^` && node `v18^` |
@@ -73,7 +73,7 @@ https://windows.php.net/downloads/releases/archives/php-8.0.9-Win32-vs16-x64.zip
 ```
 /
 └── Project folder/
-    ├── *The rest of the files*
+    ├── *Laravel and Vue files are combined here*
     └── README.md
 ```
 
@@ -109,6 +109,20 @@ https://windows.php.net/downloads/releases/archives/php-8.0.9-Win32-vs16-x64.zip
 | `php artisan key:generate`  | Generates a key for .env file                |
 | `npm run artisan-watch`     | Run both `php artisan serve` and `yarn watch`|
 | `http://127.0.0.1:8000/`    | Visit your app, Enjoy! 🎉🎉                 |
+<br>
+
+## Vue 3 - Laravel 8
+
+> bundled and optimized in `webpack` 🕸️
+
+| Commands                  | Action                                       |
+| :------------------------ | :--------------------------------------------|
+| `yarn install`            | Installs node dependencies                   |
+| `composer install`        | Installs composer dependencies               |
+| `copy .env.example .env`  | Generates a .env file from an example        |
+| `php artisan key:generate`| Generates a key for .env file                |
+| `npm run artisan-watch`   | Run both `php artisan serve` and `yarn watch`|
+| `http://127.0.0.1:8081/`  | Visit your app, Enjoy! 🎉🎉                 |
 <br>
 
 ## Vue 3 - Laravel 9
@@ -160,12 +174,10 @@ Read full docs [here](https://github.com/Shuashuaa/v-kit-spa#readme).
 ## How to contribute
 Have an idea? Found a bug? See [how to contribute](https://github.com/Shuashuaa/v-kit-spa/wiki/Contributing).
 
-<!--## Contributors
+## Contributors
 Thanks to:
 - [RGie](https://github.com/vrlara)
-
-> To learn on how to contribute, check the [Contributing](./CONTRIBUTING.md).
-<br>
+<!-- <br>
 
 ## Changelog
 To learn about the specific changes in each release, check the [Changelog](./Changelog).
