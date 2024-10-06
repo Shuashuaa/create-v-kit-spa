@@ -4,8 +4,6 @@
 <img src="https://github.com/Shuashuaa/v-kit/blob/main/@shuashuaa-v-kit.png" width="300" />
 </p>
 
-<p>Just Trying Out Branch Protection Rules</p>
-
 <h1 align="center">create-v-kit-spa</h1>
 
 <p align="center">
