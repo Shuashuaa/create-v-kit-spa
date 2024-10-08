@@ -47,14 +47,16 @@ function successMessage(sourceVal) {
             console.log(chalk_1.default.cyanBright.bold("     O      *        '       .\n"));
         }, 300);
         setTimeout(() => {
-            console.log('Well done 🎉🎉,', chalk_1.default.green('A Boilerplates is created with coffee & passion by', chalk_1.default.green.bold.underline('Shuashuaa'), chalk_1.default.whiteBright('\nFor more info: >>'), chalk_1.default.green.underline('https://github.com/Shuashuaa/v-kit-spa\n')));
+            console.log('Well done 🎉🎉,', chalk_1.default.green('These Boilerplates are created with coffee & passion by', chalk_1.default.green.bold.underline('Shuashuaa'), chalk_1.default.whiteBright('\nFor more info: >>'), chalk_1.default.green.underline('https://github.com/Shuashuaa/v-kit-spa\n')));
         }, 800);
         setTimeout(() => {
             if (sourceVal == "158" || sourceVal == "159") {
+                console.log(chalk_1.default.bgBlack('Locate Project:'), chalk_1.default.cyanBright('cd project_name,'));
                 console.log(chalk_1.default.bgBlack('Install Dependencies:'), chalk_1.default.cyanBright('npm install') + ',', chalk_1.default.cyanBright('composer install') + ',', chalk_1.default.cyanBright('\ncopy .env.example .env'), 'and', chalk_1.default.cyanBright('php artisan key:generate'));
                 console.log(chalk_1.default.bgBlack('Run Project:'), chalk_1.default.cyanBright('npm run artisan-watch') + '.\n');
             }
             else if (sourceVal == "160" || sourceVal == "161" || sourceVal == "162") {
+                console.log(chalk_1.default.bgBlack('Locate Project:'), chalk_1.default.cyanBright('cd project_name,'));
                 console.log(chalk_1.default.bgBlack('Install Dependencies:'), chalk_1.default.cyanBright('yarn install') + ',', chalk_1.default.cyanBright('composer install') + ',', chalk_1.default.cyanBright('\ncopy .env.example .env'), 'and', chalk_1.default.cyanBright('php artisan key:generate'));
                 console.log(chalk_1.default.bgBlack('Run Project:'), chalk_1.default.cyanBright('npm run artisan-dev') + '.\n');
             }
