@@ -42,7 +42,7 @@ function getBoilerplateChoice() {
             // Decoupled:\n`;
             message += `\n[1] - ${chalk_1.default.bold.underline('Vue2-Laravel8')}\n`;
             // [6] - ${chalk.bold.underline.gray('Vue2-Laravel8')} ${chalk.gray.dim.italic('(on-going..)')};
-            message += `[2] - ${chalk_1.default.bold.underline.gray('Vue3-Laravel8')} ${chalk_1.default.gray.dim.italic('(on-going..)')}\n`;
+            message += `[2] - ${chalk_1.default.bold.underline('Vue3-Laravel8')}\n`;
             // [7] - ${chalk.bold.underline.gray('Vue3-Laravel8')} ${chalk.gray.dim.italic('(on-going..)')}\n`; 
             message += `[3] - ${chalk_1.default.bold.underline('Vue3-Laravel9')}\n`;
             // [8] - ${chalk.bold.underline.gray('Vue3-Laravel9')} ${chalk.gray.dim.italic('(on-going..)')}\n`;
