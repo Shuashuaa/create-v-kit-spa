@@ -1,19 +1,25 @@
 <br>
 
-<p align="center">
-<img src="https://github.com/Shuashuaa/v-kit/blob/main/@shuashuaa-v-kit.png" width="300" />
-</p>
+<div align="center">
+<img src="https://gitlab.com/shuashuaa/v-kit-app/-/raw/main/@shuashuaa-v-kit.png?ref_type=heads" width="300" />
+</div>
 
-<h1 align="center">create-v-kit-spa</h1>
+<div align="center">
+<h1>create-v-kit-spa</h1>
+</div>
 
-<p align="center">
+<div align="center">
+<p>
 A simple way to start your vue-laravel-spa projects.
 <!-- A collection of vue-laravel-spa boilerplates Powered by vue, laravel, <br>
 vite/webpack, vuetify and pinia. up-to-date, ready for local-deployment and fully customizable. -->
 <!-- Looking for a boilerplate for your next project? Kickstart it with v-kit-spa now! -->
 </p>
 
-<p align="center">
+</div>
+
+<div align="center">
+<p>
 <!-- https://shields.io/badges/npm-package-minimized-gzipped-size-scoped -->
 <!-- 	https://simpleicons.org/ -->
 <!-- <a href="https://www.npmjs.com/package/create-v-kit-spa"><img src="https://img.shields.io/npm/v/create-v-kit-spa?color=c95f8b&amp;label=" alt="NPM version"></a>
@@ -24,6 +30,8 @@ vite/webpack, vuetify and pinia. up-to-date, ready for local-deployment and full
 <a href="https://github.com/shuashuaa/v-kit/blob/main/LICENSE"><img src="https://img.shields.io/bundlejs/size/create-v-kit-spa?style=flat-square&logo=npm&color=ffe963" alt="MINIFIED SIZE"></a>
 <!-- 007EC6 -->
 </p>
+
+</div>
 <!-- [![npm](https://img.shields.io/npm/v/@shuashuaa/vkit?color=c95f8b&amp;label=)](https://www.npmjs.com/package/vkit)
 [![npm](https://img.shields.io/npm/dw/@shuashuaa/vkit?style=flat-square)](https://www.npmjs.com/package/vkit)
 [![GitHub](https://img.shields.io/github/license/shuashuaa/v-kit?style=flat-square)](https://github.com/shuashuaa/v-kit/blob/main/LICENSE) -->
@@ -176,7 +184,7 @@ Have an idea? Found a bug? See [how to contribute](https://github.com/Shuashuaa/
 
 ## Contributors
 Thanks to:
-- [RGie](https://github.com/vrlara)
+- [RGie](https://github.com/RGienz)
 <!-- <br>
 
 ## Changelog
