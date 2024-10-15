@@ -17,8 +17,8 @@ const fs_1 = __importDefault(require("fs"));
 const utils_1 = require("./utils");
 const prompts_1 = require("./prompts");
 const messages_1 = require("./messages");
-const yargs_1 = __importDefault(require("yargs"));
 const count_1 = require("./count");
+const yargs_1 = __importDefault(require("yargs"));
 function createProject() {
     return __awaiter(this, void 0, void 0, function* () {
         const argv = yargs_1.default.argv;
