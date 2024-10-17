@@ -47,7 +47,7 @@ function successMessage(sourceVal) {
             console.log(chalk_1.default.cyanBright.bold("     O      *        '       .\n"));
         }, 300);
         setTimeout(() => {
-            console.log('Well done 🎉🎉,', chalk_1.default.green('These Boilerplates are created with coffee & passion by', chalk_1.default.green.bold.underline('Shuashuaa'), chalk_1.default.whiteBright('\nFor more info (github): >>'), chalk_1.default.green.underline('https://github.com/Shuashuaa/create-v-kit-spa'), chalk_1.default.whiteBright('\nFor more info (gitlab): >>'), chalk_1.default.green.underline('https://gitlab.com/Shuashuaa/v-kit-spa\n')));
+            console.log('Well done 🎉🎉,', chalk_1.default.green('These Boilerplates are created with coffee & passion by', chalk_1.default.green.bold.underline('Joshua Tania'), chalk_1.default.whiteBright('\nFor more info (github): >>'), chalk_1.default.green.underline('https://github.com/Shuashuaa/create-v-kit-spa'), chalk_1.default.whiteBright('\nFor more info (gitlab): >>'), chalk_1.default.green.underline('https://gitlab.com/Shuashuaa/v-kit-spa\n')));
         }, 800);
         setTimeout(() => {
             if (sourceVal == "158" || sourceVal == "159") {
