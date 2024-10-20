@@ -184,7 +184,7 @@ Have an idea? Found a bug? See [how to contribute](https://github.com/Shuashuaa/
 
 ## Contributors
 Thanks to:
-- [RGie](https://github.com/RGienz) for contributing and maintaining [vuejs3 - laravel9](#vue-3---laravel-9) 👏
+- [RGienz](https://github.com/RGienz) for contributing and maintaining [vuejs3 - laravel9](#vue-3---laravel-9) 👏
 <!-- <br>
 
 ## Changelog
