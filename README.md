@@ -68,7 +68,7 @@ https://windows.php.net/downloads/releases/archives/php-8.0.9-Win32-vs16-x64.zip
 # Reference Table (❗ PHP Version is Important ❗)
 
 ### Mono Repo
-> frontend and backend are united via configuration made it an sfa, easier to deploy but migrating or upgrading either frontend or backend is tricky-hard.
+> frontend and backend are in a single folder, united via configuration.
 
 | Version & Type            | Structure    |             Features                                                  | Prerequisite      |
 | :------------------------ | :------------| :---------------------------------------------------------------------| :-----------------|
