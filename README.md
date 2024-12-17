@@ -174,6 +174,7 @@ https://windows.php.net/downloads/releases/archives/php-8.0.9-Win32-vs16-x64.zip
 | `php artisan migrate`     | Create a Sessions table                      |
 | `npm run artisan-dev`     | Run both `php artisan serve` and `yarn dev`  |
 | `http://127.0.0.1:8000/`  | Visit your app, Enjoy! 🎉🎉                 |
+| `npm run build `          | Deploy! 🎉🎉                                |
 <br>
 
 ## Docs
