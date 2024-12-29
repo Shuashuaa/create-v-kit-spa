@@ -64,3 +64,22 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## isNeed of api.php
+```
+php artisan install:api
+```
+
+## Deployment
+
+```
+// .env
+ASSET_URL=http://{ip_address}:{port}/ProjectName
+VITE_HOST={ip_address}
+VITE_BASE_URL=http://{ip_address}:{port}/ProjectName
+VITE_LOCAL_IP={ip_address}
+```
+
+```
+npm run build
+```

@@ -125,6 +125,7 @@ return [
     | the framework. Typically, you should not need to change this value
     | since doing so does not grant a meaningful security improvement.
     |
+    |
     */
 
     'cookie' => env(

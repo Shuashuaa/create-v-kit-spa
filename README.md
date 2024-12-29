@@ -67,7 +67,7 @@ https://windows.php.net/downloads/releases/archives/php-8.0.9-Win32-vs16-x64.zip
 
 # Reference Table (❗ PHP Version is Important ❗)
 
-### Mono Repo
+### Monolith Repo
 > frontend and backend are in a single folder, united via configuration.
 
 | Version & Type       |  Features                                                | Prerequisite                    |
