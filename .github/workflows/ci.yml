@@ -25,6 +25,7 @@ jobs:
       - name: Install expect
         run: apt-get install -y expect
 
+      # Use expect to provide multiple inputs interactively
       - name: Simulate interactive input using expect
         run: |
           expect <<EOF
@@ -32,6 +33,6 @@ jobs:
           expect "Enter a project name (using default \"v-kit-app\" if left blank):"
           send "sample-proj\n"
           expect "Select your preferred boilerplate:"
-          send "5\n"  # This selects the Vue3-Laravel11 with php v8.2 - v8.3
+          send "5\n"
           expect eof
           EOF
