@@ -13,9 +13,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-        with:
-          node-version: 20
       - run: npm install
       - run: npm ci
       - run: npm run build
-      - run: echo -e "my-project\2" | npm test
+      - run: echo -e "my-first-vue-laravel-project\n2" | npm test
