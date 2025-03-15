@@ -32,7 +32,7 @@ function getProjectName() {
             // });
             let message = `\n${chalk_1.default.bold.cyan('?')} ${chalk_1.default.bold('Enter a project name')} (using default "${chalk_1.default.bold.magentaBright('v-kit-app')}" if left blank): `;
             readline.question(message, (answer) => {
-                exports.fileNameVariable = answer;
+                exports.fileNameVariable = answer ? answer : 'v-kit-spa';
                 resolve(answer || 'v-kit-app');
             });
         });
