@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MainController;
 
-Route::get('/{any?}', function () {
-    return view('layouts.app');
-})->where('any','.*');
+Route::get('/{any?}', [MainController::class, 'index'])->where('any', '.*');
