@@ -16,4 +16,8 @@ jobs:
       - run: npm install
       - run: npm ci
       - run: npm run build
+
+      - name: Install PHP
+        run: sudo apt-get install php
+
       - run: echo -e "my-first-vue-laravel-project\n2" | npm test
