@@ -1,5 +1,6 @@
 <br>
 
+
 <div align="center">
 <img src="https://gitlab.com/shuashuaa/v-kit-app/-/raw/main/@shuashuaa-v-kit.png?ref_type=heads" width="300" />
 </div>
@@ -25,6 +26,8 @@ vite/webpack, vuetify and pinia. up-to-date, ready for local-deployment and full
 <!-- <a href="https://www.npmjs.com/package/create-v-kit-spa"><img src="https://img.shields.io/npm/v/create-v-kit-spa?color=c95f8b&amp;label=" alt="NPM version"></a>
 <a href="https://www.npmjs.com/package/create-v-kit-spa"><img src="https://img.shields.io/npm/dw/create-v-kit-spa?style=flat-square" alt="NPM downloads"></a>
 <a href="https://github.com/shuashuaa/v-kit/blob/main/LICENSE"><img src="https://img.shields.io/npm/v/create-v-kit-spa?style=flat-square" alt="License"></a> -->
+
+[![ci-test](https://github.com/Shuashuaa/create-v-kit-spa/actions/workflows/ci.yml/badge.svg)](https://github.com/Shuashuaa/create-v-kit-spa/actions/workflows/ci.yml)
 <a href="https://github.com/shuashuaa/v-kit/blob/main/LICENSE"><img src="https://img.shields.io/npm/v/create-v-kit-spa?style=flat-square&logo=npm&color=ffe963" alt="VERSION"></a>
 <a href="https://www.npmjs.com/package/create-v-kit-spa"><img src="https://img.shields.io/npm/dw/create-v-kit-spa?style=flat-square&logo=npm&color=ffe963" alt="NPM DOWNLOADS"></a>
 <a href="https://github.com/shuashuaa/v-kit/blob/main/LICENSE"><img src="https://img.shields.io/bundlejs/size/create-v-kit-spa?style=flat-square&logo=npm&color=ffe963" alt="MINIFIED SIZE"></a>
