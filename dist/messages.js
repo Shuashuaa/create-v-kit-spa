@@ -15,6 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.successMessage = successMessage;
 exports.errorMessage = errorMessage;
 const chalk_1 = __importDefault(require("chalk"));
+const prompts_1 = require("./prompts");
 function successMessage(sourceVal) {
     return __awaiter(this, void 0, void 0, function* () {
         // console.log(sourceVal)
@@ -51,12 +52,12 @@ function successMessage(sourceVal) {
         }, 800);
         setTimeout(() => {
             if (sourceVal == "158" || sourceVal == "159") {
-                console.log(chalk_1.default.bgBlack('Locate Project:'), chalk_1.default.cyanBright('cd project_name,'));
+                console.log(chalk_1.default.bgBlack('Locate Project:'), chalk_1.default.cyanBright(`cd ${prompts_1.fileNameVariable},`));
                 console.log(chalk_1.default.bgBlack('Install Dependencies:'), chalk_1.default.cyanBright('npm install') + ',', chalk_1.default.cyanBright('composer install') + ',', chalk_1.default.cyanBright('\ncopy .env.example .env'), 'and', chalk_1.default.cyanBright('php artisan key:generate'));
                 console.log(chalk_1.default.bgBlack('Run Project:'), chalk_1.default.cyanBright('npm run artisan-watch') + '.\n');
             }
             else if (sourceVal == "160" || sourceVal == "161" || sourceVal == "162") {
-                console.log(chalk_1.default.bgBlack('Locate Project:'), chalk_1.default.cyanBright('cd project_name,'));
+                console.log(chalk_1.default.bgBlack('Locate Project:'), chalk_1.default.cyanBright(`cd ${prompts_1.fileNameVariable},`));
                 console.log(chalk_1.default.bgBlack('Install Dependencies:'), chalk_1.default.cyanBright('yarn install') + ',', chalk_1.default.cyanBright('composer install') + ',', chalk_1.default.cyanBright('\ncopy .env.example .env'), 'and', chalk_1.default.cyanBright('php artisan key:generate'));
                 console.log(chalk_1.default.bgBlack('Run Project:'), chalk_1.default.cyanBright('npm run artisan-dev') + '.\n');
             }

@@ -1,4 +1,4 @@
-name: ci
+name: CI
 
 on:
   pull_request:
@@ -13,11 +13,26 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: Install Dependencies
-        run: npm ci
+      - run: npm install
+      - run: npm ci
+      - run: npm run build
 
-      - name: Build the Project
-        run: npm run build
+      # Install PHP (required by your script)
+      - name: Install PHP
+        run: apt-get update && apt-get install -y php
 
-      - name: Run Tests
-        run: npm test
+      # Install expect to simulate the interactive input
+      - name: Install expect
+        run: apt-get install -y expect
+
+      # Use expect to provide multiple inputs interactively
+      - name: Simulate interactive input using expect
+        run: |
+          expect <<EOF
+          spawn npm test
+          expect "Enter a project name (using default \"v-kit-app\" if left blank):"
+          send "sample-proj\n"
+          expect "Select your preferred boilerplate:"
+          send "5\n"
+          expect eof
+          EOF

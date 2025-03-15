@@ -12,6 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.fileNameVariable = void 0;
 exports.getProjectName = getProjectName;
 exports.getBoilerplateChoice = getBoilerplateChoice;
 exports.closeReadline = closeReadline;
@@ -22,6 +23,7 @@ const readline = (0, readline_1.createInterface)({
     input: process.stdin,
     output: process.stdout
 });
+exports.fileNameVariable = '';
 function getProjectName() {
     return __awaiter(this, void 0, void 0, function* () {
         return new Promise((resolve) => {
@@ -30,6 +32,7 @@ function getProjectName() {
             // });
             let message = `\n${chalk_1.default.bold.cyan('?')} ${chalk_1.default.bold('Enter a project name')} (using default "${chalk_1.default.bold.magentaBright('v-kit-app')}" if left blank): `;
             readline.question(message, (answer) => {
+                exports.fileNameVariable = answer;
                 resolve(answer || 'v-kit-app');
             });
         });
