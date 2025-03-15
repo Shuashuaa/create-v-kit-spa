@@ -67,16 +67,16 @@ https://windows.php.net/downloads/releases/archives/php-8.0.9-Win32-vs16-x64.zip
 
 # Reference Table (❗ PHP Version is Important ❗)
 
-### Mono Repo
-> frontend and backend are united via configuration made it an sfa, easier to deploy but migrating or upgrading either frontend or backend is tricky-hard.
+### Monolith Repo
+> frontend and backend are in a single folder, united via configuration.
 
-| Version & Type            | Structure    |             Features                                                  | Prerequisite      |
-| :------------------------ | :------------| :---------------------------------------------------------------------| :-----------------|
-| `vue 2 - laravel 8`       | `Monorepo`     | runs in `webpack` w/ the following: `pinia/vuex`, `vuetify 2`, `vue-router` | php `v7.4` && node `^18x` |
-| `vue 3 - laravel 8`       | `Monorepo`     | runs in `webpack` w/ the following: `pinia`, `vuetify 3`, `vue-router`                     |php `v7.4` && node `^18x` |
-| `vue 3 - laravel 9`       | `Monorepo`     | runs in `vite` w/ the following: `pinia`, `vuetify 3`, `vue-router`, `developer friendly` |php `v8.0` && node `^18x` |
-| `vue 3 - laravel 10`       | `Monorepo`     | runs in `vite` w/ the following: `pinia`, `vuetify 3`, `vue-router`, `developer friendly` | php `v8.1` && node `v18^` |
-| `vue 3 - laravel 11`       | `Monorepo`     | runs in `vite` w/ the following: `pinia`, `vuetify 3`, `vue-router`, `developer friendly` | php `v8.2^` && node `v18^` |
+| Version & Type       |  Features                                                | Prerequisite                    |
+| :--------------------|  :-------------------------------------------------------| :-------------------------------|
+| `vue 2 - laravel 8`  |  runs in `webpack`, Development Ready                    | php `v7.4` && node `v18^`       |
+| `vue 3 - laravel 8`  |  runs in `webpack`, Development Ready                    | php `v7.4` && node `v18^`       |
+| `vue 3 - laravel 9`  |  runs in `vite`, Development Ready, Developer Friendly   | php `v8.0` && node `v18^`       |
+| `vue 3 - laravel 10` |  runs in `vite`, Development Ready, Developer Friendly   | php `v8.1` && node `v18^`       |
+| `vue 3 - laravel 11` |  runs in `vite`, Development Ready, Developer Friendly   | php `v8.2 - v8.3` && node `v18^`|
 
 ```
 /
@@ -174,6 +174,7 @@ https://windows.php.net/downloads/releases/archives/php-8.0.9-Win32-vs16-x64.zip
 | `php artisan migrate`     | Create a Sessions table                      |
 | `npm run artisan-dev`     | Run both `php artisan serve` and `yarn dev`  |
 | `http://127.0.0.1:8000/`  | Visit your app, Enjoy! 🎉🎉                 |
+| `npm run build `          | Deploy! 🎉🎉                                |
 <br>
 
 ## Docs
@@ -184,7 +185,7 @@ Have an idea? Found a bug? See [how to contribute](https://github.com/Shuashuaa/
 
 ## Contributors
 Thanks to:
-- [RGie](https://github.com/RGienz) for contributing and maintaining [vuejs3 - laravel9](#vue-3---laravel-9) 👏
+- [RGienz](https://github.com/RGienz) for contributing and maintaining [vuejs3 - laravel8](#vue-3---laravel-8) 👏
 <!-- <br>
 
 ## Changelog
