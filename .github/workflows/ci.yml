@@ -18,4 +18,4 @@ jobs:
       - run: npm install
       - run: npm ci
       - run: npm run build
-      - run: npm test
+      - run: echo -e "my-project\2" | npm test
