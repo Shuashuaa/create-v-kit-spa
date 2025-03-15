@@ -18,6 +18,6 @@ jobs:
       - run: npm run build
 
       - name: Install PHP
-        run: sudo apt-get install php
+        run: apt-get update && apt-get install -y php
 
       - run: echo -e "my-first-vue-laravel-project\n2" | npm test
