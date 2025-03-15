@@ -18,7 +18,7 @@ export  
     let message = `\n${chalk.bold.cyan('?')} ${chalk.bold('Enter a project name')} (using default "${chalk.bold.magentaBright('v-kit-app')}" if left blank): `;
 
     readline.question(message, (answer) => {
-      fileNameVariable = answer;
+      fileNameVariable = answer ? answer : 'v-kit-spa';
       resolve(answer || 'v-kit-app');
     })
   });
