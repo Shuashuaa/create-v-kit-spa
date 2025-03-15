@@ -26,6 +26,18 @@ function createProject() {
         if (!projectName) {
             projectName = yield (0, prompts_1.getProjectName)();
         }
+        // Checks the Destination Path if the inserted project name is already exists
+        const destinationPath = path_1.default.join(process.cwd(), projectName);
+        const dirExists = yield fs_1.default.promises
+            .access(destinationPath, fs_1.default.constants.F_OK)
+            .then(() => true)
+            .catch(() => false);
+        if (dirExists) {
+            (0, messages_1.errorMessage)(new Error(`\n✖ The directory "${projectName}" already exists.`));
+            (0, prompts_1.closeReadline)();
+            return;
+        }
+        // Proceeds to Selection of Boilerplate
         const boilerplateChoice = yield (0, prompts_1.getBoilerplateChoice)();
         const templatePath = getTemplatePath(boilerplateChoice);
         if (!templatePath) {
@@ -34,7 +46,6 @@ function createProject() {
             return;
         }
         const sourcePath = path_1.default.join(__dirname, '../lib', templatePath);
-        const destinationPath = path_1.default.join(process.cwd(), projectName);
         try {
             yield fs_1.default.promises.mkdir(destinationPath);
             yield (0, utils_1.copyProjectStructure)(sourcePath, destinationPath);

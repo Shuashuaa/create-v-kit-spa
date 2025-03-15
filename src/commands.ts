@@ -15,6 +15,20 @@ async function createProject() {
     projectName = await getProjectName();
   }
 
+  // Checks the Destination Path if the inserted project name is already exists
+  const destinationPath = path.join(process.cwd(), projectName);
+  const dirExists = await fs.promises
+  .access(destinationPath, fs.constants.F_OK)
+  .then(() => true)
+  .catch(() => false);
+
+  if (dirExists) {
+    errorMessage(new Error(`\n✖ The directory "${projectName}" already exists.`));
+    closeReadline();
+    return;
+  }
+
+  // Proceeds to Selection of Boilerplate
   const boilerplateChoice = await getBoilerplateChoice();
   const templatePath = getTemplatePath(boilerplateChoice);
 
@@ -25,8 +39,7 @@ async function createProject() {
   }
 
   const sourcePath = path.join(__dirname, '../lib', templatePath);
-  const destinationPath = path.join(process.cwd(), projectName);
-
+  
   try {
     await fs.promises.mkdir(destinationPath);
     await copyProjectStructure(sourcePath, destinationPath);
