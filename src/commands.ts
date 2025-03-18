@@ -39,7 +39,6 @@ async function createProject() {
   }
 
   const sourcePath = path.join(__dirname, '../lib', templatePath);
-
   try {
     await fs.promises.mkdir(destinationPath);
     await copyProjectStructure(sourcePath, destinationPath);
