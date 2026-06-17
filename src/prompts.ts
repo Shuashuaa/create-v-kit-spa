@@ -27,28 +27,39 @@ export  
 export async function getBoilerplateChoice(): Promise<number> {
   return new Promise(async (resolve) => {
 
-    //!
-    const phpProcess = spawn('php', ['-v']);
+    // Scan php version. Wait for the process to finish (or fail) before prompting.
+    // `shell: true` so the bare name `php` resolves via PATH/PATHEXT on Windows,
+    // matching how the interactive shell finds php.exe.
+    await new Promise<void>((resolvePhp) => {
+      let settled = false;
+      const done = () => {
+        if (settled) return;
+        settled = true;
+        resolvePhp();
+      };
 
-    let version = null;
+      const phpProcess = spawn('php', ['-v'], { shell: true });
 
-    phpProcess.stdout.on('data', (data: { toString: () => string; }) => {
-      const match = data.toString().match(/PHP (\d+\.\d+\.\d+)/);
-      if (match) {
-        version = `v${match[1]}`;
-        console.log(chalk.italic('Scanning... your php is:'),chalk.greenBright(version));
-      } else {
-        console.log(chalk.redBright(`Php is not installed in your machine`));
-      }
-    });
+      phpProcess.stdout.on('data', (data: { toString: () => string; }) => {
+        const match = data.toString().match(/PHP (\d+\.\d+\.\d+)/);
+        if (match) {
+          console.log(chalk.italic('Scanning... your php is:'), chalk.greenBright(`v${match[1]}`));
+        }
+      });
 
-    phpProcess.stderr.on('data', (data: any) => {
-      console.error(`Php not found: ${data}`);
-    });
+      phpProcess.stderr.on('data', (data: any) => {
+        console.error(chalk.redBright(`Php check error: ${data}`));
+      });
 
-    //!!
-    await new Promise<void>((resolve) => {
-      phpProcess.stdout.once('data', () => resolve());
+      // Spawn failure (binary not found) emits 'error', NOT stderr.
+      // Without this handler Node throws on the unhandled 'error' event and crashes.
+      phpProcess.on('error', () => {
+        console.log(chalk.redBright('Php not found in PATH. Skipping version scan; you can still pick a boilerplate.'));
+        done();
+      });
+
+      // Resolve once the process exits so a missing/quiet php can't hang the prompt.
+      phpProcess.on('close', () => done());
     });
 
     //! This will not run before the function above 'resolve'
