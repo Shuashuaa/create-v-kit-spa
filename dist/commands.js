@@ -14,65 +14,67 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const path_1 = __importDefault(require("path"));
 const fs_1 = __importDefault(require("fs"));
-const utils_1 = require("./utils");
-const prompts_1 = require("./prompts");
-const messages_1 = require("./messages");
-const count_1 = require("./count");
+const chalk_1 = __importDefault(require("chalk"));
 const yargs_1 = __importDefault(require("yargs"));
+const helpers_1 = require("yargs/helpers");
+const prompts_1 = require("@clack/prompts");
+const utils_1 = require("./utils");
+const prompts_2 = require("./prompts");
+const messages_1 = require("./messages");
 function createProject() {
     return __awaiter(this, void 0, void 0, function* () {
-        const argv = yargs_1.default.argv;
-        let projectName = process.argv[2];
-        if (!projectName) {
-            projectName = yield (0, prompts_1.getProjectName)();
-        }
-        // Checks the Destination Path if the inserted project name is already exists
+        const argv = yield (0, yargs_1.default)((0, helpers_1.hideBin)(process.argv))
+            .scriptName('create-v-kit-spa')
+            .option('template', {
+            alias: 't',
+            type: 'string',
+            describe: `Boilerplate id (${prompts_2.TEMPLATES.map((t) => t.id).join(', ')}) — skips the prompt`,
+        })
+            .help()
+            .parse();
+        (0, prompts_1.intro)(chalk_1.default.bgCyan.black(' create-v-kit-spa '));
+        // Project name: positional arg wins, otherwise prompt.
+        const projectName = argv._[0] ? String(argv._[0]) : yield (0, prompts_2.getProjectName)();
         const destinationPath = path_1.default.join(process.cwd(), projectName);
-        const dirExists = yield fs_1.default.promises
-            .access(destinationPath, fs_1.default.constants.F_OK)
-            .then(() => true)
-            .catch(() => false);
-        if (dirExists) {
-            (0, messages_1.errorMessage)(new Error(`\n✖ The directory "${projectName}" already exists.`));
-            (0, prompts_1.closeReadline)();
-            return;
+        if (fs_1.default.existsSync(destinationPath)) {
+            (0, messages_1.errorMessage)(new Error(`The directory "${projectName}" already exists.`));
+            process.exit(1);
         }
-        // Proceeds to Selection of Boilerplate
-        const boilerplateChoice = yield (0, prompts_1.getBoilerplateChoice)();
-        const templatePath = getTemplatePath(boilerplateChoice);
-        if (!templatePath) {
-            (0, messages_1.errorMessage)(new Error('\n✖ Invalid boilerplate choice.'));
-            (0, prompts_1.closeReadline)();
-            return;
+        // Scan PHP (informational — boilerplates still install without it locally).
+        const phpSpinner = (0, prompts_1.spinner)();
+        phpSpinner.start('Scanning php');
+        const phpVersion = yield (0, prompts_2.detectPhp)();
+        phpSpinner.stop(phpVersion
+            ? `php ${phpVersion} detected`
+            : 'php not found in PATH — install it before running the project');
+        // Template: --template flag wins (validated), otherwise prompt.
+        let templateId = argv.template;
+        if (templateId && !prompts_2.TEMPLATES.some((t) => t.id === templateId)) {
+            (0, messages_1.errorMessage)(new Error(`Invalid template "${templateId}". Valid ids: ${prompts_2.TEMPLATES.map((t) => t.id).join(', ')}`));
+            process.exit(1);
         }
-        const sourcePath = path_1.default.join(__dirname, '../lib', templatePath);
+        if (!templateId)
+            templateId = yield (0, prompts_2.getTemplateChoice)();
+        const template = prompts_2.TEMPLATES.find((t) => t.id === templateId);
+        const sourcePath = path_1.default.join(__dirname, '../lib', template.id);
+        const copySpinner = (0, prompts_1.spinner)();
+        copySpinner.start(`Creating ${template.label} project`);
         try {
             yield fs_1.default.promises.mkdir(destinationPath);
             yield (0, utils_1.copyProjectStructure)(sourcePath, destinationPath);
-            (0, count_1.getCount)(sourcePath, templatePath);
+            copySpinner.stop(`Created ${chalk_1.default.cyan(projectName)} (${template.label})`);
         }
         catch (error) {
+            copySpinner.stop('Failed to create project');
             (0, messages_1.errorMessage)(error);
+            process.exit(1);
         }
-        finally {
-            (0, prompts_1.closeReadline)();
-        }
+        (0, prompts_1.outro)(chalk_1.default.green(`${template.label} boilerplate ready 🎉`));
+        (0, messages_1.successMessage)(template.id, projectName);
     });
 }
-function getTemplatePath(boilerplateChoice) {
-    switch (boilerplateChoice) {
-        case 1:
-            return '158';
-        case 2:
-            return '159';
-        case 3:
-            return '160';
-        case 4:
-            return '161';
-        case 5:
-            return '162';
-        default:
-            return null;
-    }
-}
-createProject();
+createProject().catch((error) => {
+    var _a;
+    prompts_1.log.error((_a = error === null || error === void 0 ? void 0 : error.message) !== null && _a !== void 0 ? _a : String(error));
+    process.exit(1);
+});
