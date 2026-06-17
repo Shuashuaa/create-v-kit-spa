@@ -41,25 +41,35 @@ function getProjectName() {
 function getBoilerplateChoice() {
     return __awaiter(this, void 0, void 0, function* () {
         return new Promise((resolve) => __awaiter(this, void 0, void 0, function* () {
-            //!
-            const phpProcess = spawn('php', ['-v']);
-            let version = null;
-            phpProcess.stdout.on('data', (data) => {
-                const match = data.toString().match(/PHP (\d+\.\d+\.\d+)/);
-                if (match) {
-                    version = `v${match[1]}`;
-                    console.log(chalk_1.default.italic('Scanning... your php is:'), chalk_1.default.greenBright(version));
-                }
-                else {
-                    console.log(chalk_1.default.redBright(`Php is not installed in your machine`));
-                }
-            });
-            phpProcess.stderr.on('data', (data) => {
-                console.error(`Php not found: ${data}`);
-            });
-            //!!
-            yield new Promise((resolve) => {
-                phpProcess.stdout.once('data', () => resolve());
+            // Scan php version. Wait for the process to finish (or fail) before prompting.
+            // `shell: true` so the bare name `php` resolves via PATH/PATHEXT on Windows,
+            // matching how the interactive shell finds php.exe.
+            yield new Promise((resolvePhp) => {
+                let settled = false;
+                const done = () => {
+                    if (settled)
+                        return;
+                    settled = true;
+                    resolvePhp();
+                };
+                const phpProcess = spawn('php', ['-v'], { shell: true });
+                phpProcess.stdout.on('data', (data) => {
+                    const match = data.toString().match(/PHP (\d+\.\d+\.\d+)/);
+                    if (match) {
+                        console.log(chalk_1.default.italic('Scanning... your php is:'), chalk_1.default.greenBright(`v${match[1]}`));
+                    }
+                });
+                phpProcess.stderr.on('data', (data) => {
+                    console.error(chalk_1.default.redBright(`Php check error: ${data}`));
+                });
+                // Spawn failure (binary not found) emits 'error', NOT stderr.
+                // Without this handler Node throws on the unhandled 'error' event and crashes.
+                phpProcess.on('error', () => {
+                    console.log(chalk_1.default.redBright('Php not found in PATH. Skipping version scan; you can still pick a boilerplate.'));
+                    done();
+                });
+                // Resolve once the process exits so a missing/quiet php can't hang the prompt.
+                phpProcess.on('close', () => done());
             });
             //! This will not run before the function above 'resolve'
             let message = `\n${chalk_1.default.bold.cyan('?')} ${chalk_1.default.bold('Select your preferred boilerplate:')}\n`;
