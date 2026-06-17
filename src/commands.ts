@@ -1,71 +1,75 @@
 import path from 'path';
 import fs from 'fs';
-import { copyProjectStructure } from './utils';
-import { getProjectName, getBoilerplateChoice, closeReadline } from './prompts';
-import { errorMessage } from './messages';
-import { getCount } from './count';
+import chalk from 'chalk';
 import yargs from 'yargs';
-
+import { hideBin } from 'yargs/helpers';
+import { intro, outro, spinner, log } from '@clack/prompts';
+import { copyProjectStructure } from './utils';
+import { getProjectName, getTemplateChoice, detectPhp, TEMPLATES } from './prompts';
+import { successMessage, errorMessage } from './messages';
 
 async function createProject() {
-  const argv = yargs.argv;
-  let projectName = process.argv[2];
+  const argv = await yargs(hideBin(process.argv))
+    .scriptName('create-v-kit-spa')
+    .option('template', {
+      alias: 't',
+      type: 'string',
+      describe: `Boilerplate id (${TEMPLATES.map((t) => t.id).join(', ')}) — skips the prompt`,
+    })
+    .help()
+    .parse();
 
-  if (!projectName) {
-    projectName = await getProjectName();
-  }
+  intro(chalk.bgCyan.black(' create-v-kit-spa '));
 
-  // Checks the Destination Path if the inserted project name is already exists
+  // Project name: positional arg wins, otherwise prompt.
+  const projectName = argv._[0] ? String(argv._[0]) : await getProjectName();
   const destinationPath = path.join(process.cwd(), projectName);
-  const dirExists = await fs.promises
-  .access(destinationPath, fs.constants.F_OK)
-  .then(() => true)
-  .catch(() => false);
 
-  if (dirExists) {
-    errorMessage(new Error(`\n✖ The directory "${projectName}" already exists.`));
-    closeReadline();
-    return;
+  if (fs.existsSync(destinationPath)) {
+    errorMessage(new Error(`The directory "${projectName}" already exists.`));
+    process.exit(1);
   }
 
-  // Proceeds to Selection of Boilerplate
-  const boilerplateChoice = await getBoilerplateChoice();
-  const templatePath = getTemplatePath(boilerplateChoice);
+  // Scan PHP (informational — boilerplates still install without it locally).
+  const phpSpinner = spinner();
+  phpSpinner.start('Scanning php');
+  const phpVersion = await detectPhp();
+  phpSpinner.stop(
+    phpVersion
+      ? `php ${phpVersion} detected`
+      : 'php not found in PATH — install it before running the project',
+  );
 
-  if (!templatePath) {
-    errorMessage(new Error('\n✖ Invalid boilerplate choice.'));
-    closeReadline();
-    return;
+  // Template: --template flag wins (validated), otherwise prompt.
+  let templateId = argv.template;
+  if (templateId && !TEMPLATES.some((t) => t.id === templateId)) {
+    errorMessage(
+      new Error(`Invalid template "${templateId}". Valid ids: ${TEMPLATES.map((t) => t.id).join(', ')}`),
+    );
+    process.exit(1);
   }
+  if (!templateId) templateId = await getTemplateChoice();
 
-  const sourcePath = path.join(__dirname, '../lib', templatePath);
+  const template = TEMPLATES.find((t) => t.id === templateId)!;
+  const sourcePath = path.join(__dirname, '../lib', template.id);
+
+  const copySpinner = spinner();
+  copySpinner.start(`Creating ${template.label} project`);
   try {
     await fs.promises.mkdir(destinationPath);
     await copyProjectStructure(sourcePath, destinationPath);
-    getCount(sourcePath, templatePath)
-
+    copySpinner.stop(`Created ${chalk.cyan(projectName)} (${template.label})`);
   } catch (error: any) {
+    copySpinner.stop('Failed to create project');
     errorMessage(error);
-  } finally {
-    closeReadline();
+    process.exit(1);
   }
+
+  successMessage(template.id, projectName);
+  outro(chalk.green(`${template.label} boilerplate ready 🎉`));
 }
 
-function getTemplatePath(boilerplateChoice: number): string | null {
-  switch (boilerplateChoice) {
-    case 1:
-      return '158';
-    case 2:
-      return '159';
-    case 3:
-      return '160';
-    case 4:
-      return '161';
-    case 5:
-      return '162';
-    default:
-      return null;
-  }
-}
-
-createProject();
+createProject().catch((error: any) => {
+  log.error(error?.message ?? String(error));
+  process.exit(1);
+});

@@ -1,13 +1,4 @@
 "use strict";
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
@@ -16,54 +7,32 @@ exports.successMessage = successMessage;
 exports.errorMessage = errorMessage;
 const chalk_1 = __importDefault(require("chalk"));
 const prompts_1 = require("./prompts");
-function successMessage(sourceVal) {
-    return __awaiter(this, void 0, void 0, function* () {
-        // console.log(sourceVal)
-        let tempVal = '';
-        if (sourceVal == '158') {
-            tempVal = 'Vue2-Laravel8';
-        }
-        else if (sourceVal == '159') {
-            tempVal = 'Vue3-Laravel8';
-        }
-        else if (sourceVal == '160') {
-            tempVal = 'Vue3-Laravel9';
-        }
-        else if (sourceVal == '161') {
-            tempVal = 'Vue3-Laravel10';
-        }
-        else if (sourceVal == '162') {
-            tempVal = 'Vue3-Laravel11';
-        }
-        console.log(chalk_1.default.green(`\n✔  ${tempVal} boilerplate is successfully downloaded!. \n`));
-        setTimeout(() => {
-            console.log(chalk_1.default.yellow.bold("              *       ˜"));
-            console.log(chalk_1.default.cyan.bold("        ˜                  |"));
-            console.log(chalk_1.default.red.bold("    ()    .-.,='``'=.    - o -"));
-            console.log(chalk_1.default.yellow.bold("          '=/_       〵    |"));
-            console.log(chalk_1.default.cyanBright.bold("       *   |  '=._     )"));
-            console.log(chalk_1.default.yellow.bold("           \\      `=../`,        '"));
-            console.log(chalk_1.default.redBright.bold("         .   '=.__.=' `='      *"));
-            console.log(chalk_1.default.yellow.bold("˜                         +"));
-            console.log(chalk_1.default.cyanBright.bold("     O      *        '       .\n"));
-        }, 300);
-        setTimeout(() => {
-            console.log('Well done 🎉🎉,', chalk_1.default.green('These Boilerplates are created with coffee & passion by', chalk_1.default.green.underline('Joshua Tania'), chalk_1.default.whiteBright('\nFor more info (github): >>'), chalk_1.default.green.underline('https://github.com/Shuashuaa/create-v-kit-spa'), chalk_1.default.whiteBright('\nFor more info (gitlab): >>'), chalk_1.default.green.underline('https://gitlab.com/shuashuaa/create-v-kit-spa\n')));
-        }, 800);
-        setTimeout(() => {
-            if (sourceVal == "158" || sourceVal == "159") {
-                console.log(chalk_1.default.bgBlack('Locate Project:'), chalk_1.default.cyanBright(`cd ${prompts_1.fileNameVariable},`));
-                console.log(chalk_1.default.bgBlack('Install Dependencies:'), chalk_1.default.cyanBright('npm install') + ',', chalk_1.default.cyanBright('composer install') + ',', chalk_1.default.cyanBright('\ncopy .env.example .env'), 'and', chalk_1.default.cyanBright('php artisan key:generate'));
-                console.log(chalk_1.default.bgBlack('Run Project:'), chalk_1.default.cyanBright('npm run artisan-watch') + '.\n');
-            }
-            else if (sourceVal == "160" || sourceVal == "161" || sourceVal == "162") {
-                console.log(chalk_1.default.bgBlack('Locate Project:'), chalk_1.default.cyanBright(`cd ${prompts_1.fileNameVariable},`));
-                console.log(chalk_1.default.bgBlack('Install Dependencies:'), chalk_1.default.cyanBright('yarn install') + ',', chalk_1.default.cyanBright('composer install') + ',', chalk_1.default.cyanBright('\ncopy .env.example .env'), 'and', chalk_1.default.cyanBright('php artisan key:generate'));
-                console.log(chalk_1.default.bgBlack('Run Project:'), chalk_1.default.cyanBright('npm run artisan-dev') + '.\n');
-            }
-            console.log(chalk_1.default.bgBlack('Visit:'), chalk_1.default.bold('http://127.0.0.1:8000\n'));
-        }, 500);
-    });
+// Templates whose install hint uses npm; the rest use yarn.
+const NPM_TEMPLATES = ['158', '159'];
+function successMessage(sourceVal, projectName) {
+    var _a, _b;
+    const label = (_b = (_a = prompts_1.TEMPLATES.find((t) => t.id === sourceVal)) === null || _a === void 0 ? void 0 : _a.label) !== null && _b !== void 0 ? _b : sourceVal;
+    console.log(chalk_1.default.green(`\n✔  ${label} boilerplate is successfully downloaded!\n`));
+    console.log(chalk_1.default.yellow.bold("              *       ˜"));
+    console.log(chalk_1.default.cyan.bold("        ˜                  |"));
+    console.log(chalk_1.default.red.bold("    ()    .-.,='``'=.    - o -"));
+    console.log(chalk_1.default.yellow.bold("          '=/_       〵    |"));
+    console.log(chalk_1.default.cyanBright.bold("       *   |  '=._     )"));
+    console.log(chalk_1.default.yellow.bold("           \\      `=../`,        '"));
+    console.log(chalk_1.default.redBright.bold("         .   '=.__.=' `='      *"));
+    console.log(chalk_1.default.yellow.bold("˜                         +"));
+    console.log(chalk_1.default.cyanBright.bold("     O      *        '       .\n"));
+    console.log(chalk_1.default.bgBlack('Locate Project:'), chalk_1.default.cyanBright(`cd ${projectName},`));
+    if (NPM_TEMPLATES.includes(sourceVal)) {
+        console.log(chalk_1.default.bgBlack('Install Dependencies:'), chalk_1.default.cyanBright('npm install') + ',', chalk_1.default.cyanBright('composer install') + ',', chalk_1.default.cyanBright('\ncopy .env.example .env'), 'and', chalk_1.default.cyanBright('php artisan key:generate'));
+        console.log(chalk_1.default.bgBlack('Run Project:'), chalk_1.default.cyanBright('npm run artisan-watch') + '.\n');
+    }
+    else {
+        console.log(chalk_1.default.bgBlack('Install Dependencies:'), chalk_1.default.cyanBright('yarn install') + ',', chalk_1.default.cyanBright('composer install') + ',', chalk_1.default.cyanBright('\ncopy .env.example .env'), 'and', chalk_1.default.cyanBright('php artisan key:generate'));
+        console.log(chalk_1.default.bgBlack('Run Project:'), chalk_1.default.cyanBright('npm run artisan-dev') + '.\n');
+    }
+    console.log(chalk_1.default.bgBlack('Visit:'), chalk_1.default.bold('http://127.0.0.1:8000\n'));
+    console.log('Well done 🎉🎉,', chalk_1.default.green('These Boilerplates are created with coffee & passion by', chalk_1.default.green.underline('Joshua Tania'), chalk_1.default.whiteBright('\nFor more info (github): >>'), chalk_1.default.green.underline('https://github.com/Shuashuaa/create-v-kit-spa'), chalk_1.default.whiteBright('\nFor more info (gitlab): >>'), chalk_1.default.green.underline('https://gitlab.com/shuashuaa/create-v-kit-spa\n')));
 }
 function errorMessage(error) {
     console.error(chalk_1.default.red.inverse(`\n✖ Error creating project. ${error.message}`));

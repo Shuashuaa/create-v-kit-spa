@@ -5,7 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const chalk_1 = __importDefault(require("chalk"));
 const { spawn } = require('child_process');
-const phpProcess = spawn('php', ['-v']);
+const phpProcess = spawn('php', ['-v'], { shell: true });
 phpProcess.stdout.on('data', (data) => {
     const match = data.toString().match(/PHP (\d+\.\d+\.\d+)/);
     if (match) {
@@ -16,5 +16,10 @@ phpProcess.stdout.on('data', (data) => {
     }
 });
 phpProcess.stderr.on('data', (data) => {
-    console.error(`Php not found: ${data}`);
+    console.error(`Php check error: ${data}`);
+});
+// Spawn failure (binary not found) emits 'error', not stderr.
+// Without this, Node throws on the unhandled 'error' event and crashes.
+phpProcess.on('error', () => {
+    console.error(chalk_1.default.redBright('Php not found in PATH.'));
 });
