@@ -65,8 +65,8 @@ async function createProject() {
     process.exit(1);
   }
 
-  outro(chalk.green(`${template.label} boilerplate ready 🎉`));
   successMessage(template.id, projectName);
+  outro(chalk.green(`${template.label} boilerplate ready 🎉`));
 }
 
 createProject().catch((error: any) => {

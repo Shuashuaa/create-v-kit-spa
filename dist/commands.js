@@ -69,8 +69,8 @@ function createProject() {
             (0, messages_1.errorMessage)(error);
             process.exit(1);
         }
-        (0, prompts_1.outro)(chalk_1.default.green(`${template.label} boilerplate ready 🎉`));
         (0, messages_1.successMessage)(template.id, projectName);
+        (0, prompts_1.outro)(chalk_1.default.green(`${template.label} boilerplate ready 🎉`));
     });
 }
 createProject().catch((error) => {
