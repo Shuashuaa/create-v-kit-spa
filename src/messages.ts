@@ -1,7 +1,6 @@
 import chalk from 'chalk';
-import { fileNameVariable } from './prompts';
 
-export async function successMessage(sourceVal: string) {
+export async function successMessage(sourceVal: string, projectName: string) {
 
   // console.log(sourceVal)
   let tempVal = '';
@@ -27,12 +26,12 @@ export async function successMessage(sourceVal: string) {
 
   setTimeout(() => {
     if (sourceVal == "158" || sourceVal == "159") {
-      console.log(chalk.bgBlack('Locate Project:'), chalk.cyanBright(`cd ${fileNameVariable},`));
+      console.log(chalk.bgBlack('Locate Project:'), chalk.cyanBright(`cd ${projectName},`));
       console.log(chalk.bgBlack('Install Dependencies:'), chalk.cyanBright('npm install') + ',', chalk.cyanBright('composer install') + ',', chalk.cyanBright('\ncopy .env.example .env'), 'and', chalk.cyanBright('php artisan key:generate'));
       console.log(chalk.bgBlack('Run Project:'), chalk.cyanBright('npm run artisan-watch') + '.\n');
     }
     else if (sourceVal == "160" || sourceVal == "161" || sourceVal == "162") {
-      console.log(chalk.bgBlack('Locate Project:'), chalk.cyanBright(`cd ${fileNameVariable},`));
+      console.log(chalk.bgBlack('Locate Project:'), chalk.cyanBright(`cd ${projectName},`));
       console.log(chalk.bgBlack('Install Dependencies:'), chalk.cyanBright('yarn install') + ',', chalk.cyanBright('composer install') + ',', chalk.cyanBright('\ncopy .env.example .env'), 'and', chalk.cyanBright('php artisan key:generate'));
       console.log(chalk.bgBlack('Run Project:'), chalk.cyanBright('npm run artisan-dev') + '.\n');
     }

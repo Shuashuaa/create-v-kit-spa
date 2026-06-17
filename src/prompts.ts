@@ -1,83 +1,85 @@
-import chalk from 'chalk';
+import fs from 'fs';
+import path from 'path';
+import { text, select, isCancel, cancel } from '@clack/prompts';
 const { spawn } = require('child_process');
-import { createInterface } from 'readline';
 
-const readline = createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
+export interface Template {
+  id: string;
+  label: string;
+  hint: string;
+}
 
-export let fileNameVariable = '';
+// Single source of truth for the boilerplates. Folder ids map to ./lib/<id>.
+export const TEMPLATES: Template[] = [
+  { id: '158', label: 'Vue2-Laravel8', hint: 'php 7.4' },
+  { id: '159', label: 'Vue3-Laravel8', hint: 'php 7.4' },
+  { id: '160', label: 'Vue3-Laravel9', hint: 'php 8.0' },
+  { id: '161', label: 'Vue3-Laravel10', hint: 'php 8.1' },
+  { id: '162', label: 'Vue3-Laravel11', hint: 'php 8.2 - 8.3' },
+];
 
-export   
- async function getProjectName(): Promise<string> {
+const DEFAULT_NAME = 'v-kit-app';
+// Characters that are illegal in Windows paths (and a good ban list elsewhere too).
+const INVALID_NAME = /[<>:"/\\|?*\x00-\x1f]/;
+
+function bail(value: unknown): void {
+  if (isCancel(value)) {
+    cancel('Cancelled.');
+    process.exit(0);
+  }
+}
+
+export async function getProjectName(): Promise<string> {
+  const answer = await text({
+    message: 'Project name',
+    placeholder: DEFAULT_NAME,
+    defaultValue: DEFAULT_NAME,
+    validate(value) {
+      const v = (value ?? '').trim();
+      if (!v) return; // empty -> default name is used
+      if (INVALID_NAME.test(v)) return 'Name contains invalid path characters.';
+      if (fs.existsSync(path.join(process.cwd(), v))) return `Directory "${v}" already exists.`;
+    },
+  });
+  bail(answer);
+  return (answer as string).trim() || DEFAULT_NAME;
+}
+
+export async function getTemplateChoice(): Promise<string> {
+  const choice = await select({
+    message: 'Select your preferred boilerplate',
+    options: TEMPLATES.map((t) => ({ value: t.id, label: t.label, hint: t.hint })),
+  });
+  bail(choice);
+  return choice as string;
+}
+
+/**
+ * Resolve the installed PHP version, or null if PHP is missing.
+ * `shell: true` so the bare name `php` resolves via PATH/PATHEXT on Windows,
+ * matching how the interactive shell finds php.exe. Never rejects/throws:
+ * a missing binary emits 'error', which we catch and report as null.
+ */
+export async function detectPhp(): Promise<string | null> {
   return new Promise((resolve) => {
-    // readline.question('? Enter a project name (using default "v-kit-app" if left blank): ', (answer) => {
-    //   resolve(answer || 'v-kit-app');
-    // });
-    let message = `\n${chalk.bold.cyan('?')} ${chalk.bold('Enter a project name')} (using default "${chalk.bold.magentaBright('v-kit-app')}" if left blank): `;
+    let output = '';
+    let settled = false;
+    const finish = (version: string | null) => {
+      if (settled) return;
+      settled = true;
+      resolve(version);
+    };
 
-    readline.question(message, (answer) => {
-      fileNameVariable = answer ? answer : 'v-kit-spa';
-      resolve(answer || 'v-kit-app');
-    })
-  });
-}
+    const phpProcess = spawn('php', ['-v'], { shell: true });
 
-export async function getBoilerplateChoice(): Promise<number> {
-  return new Promise(async (resolve) => {
-
-    // Scan php version. Wait for the process to finish (or fail) before prompting.
-    // `shell: true` so the bare name `php` resolves via PATH/PATHEXT on Windows,
-    // matching how the interactive shell finds php.exe.
-    await new Promise<void>((resolvePhp) => {
-      let settled = false;
-      const done = () => {
-        if (settled) return;
-        settled = true;
-        resolvePhp();
-      };
-
-      const phpProcess = spawn('php', ['-v'], { shell: true });
-
-      phpProcess.stdout.on('data', (data: { toString: () => string; }) => {
-        const match = data.toString().match(/PHP (\d+\.\d+\.\d+)/);
-        if (match) {
-          console.log(chalk.italic('Scanning... your php is:'), chalk.greenBright(`v${match[1]}`));
-        }
-      });
-
-      phpProcess.stderr.on('data', (data: any) => {
-        console.error(chalk.redBright(`Php check error: ${data}`));
-      });
-
-      // Spawn failure (binary not found) emits 'error', NOT stderr.
-      // Without this handler Node throws on the unhandled 'error' event and crashes.
-      phpProcess.on('error', () => {
-        console.log(chalk.redBright('Php not found in PATH. Skipping version scan; you can still pick a boilerplate.'));
-        done();
-      });
-
-      // Resolve once the process exits so a missing/quiet php can't hang the prompt.
-      phpProcess.on('close', () => done());
+    phpProcess.stdout.on('data', (data: { toString: () => string }) => {
+      output += data.toString();
     });
 
-    //! This will not run before the function above 'resolve'
-    let message = `\n${chalk.bold.cyan('?')} ${chalk.bold('Select your preferred boilerplate:')}\n`;
-    message += `[1] - ${chalk.underline('Vue2-Laravel8')} ${chalk.grey.italic('~ php v7.4')}\n`
-    message += `[2] - ${chalk.underline('Vue3-Laravel8')} ${chalk.grey.italic('~ php v7.4')}\n`;
-    message += `[3] - ${chalk.underline('Vue3-Laravel9')} ${chalk.grey.italic('~ php v8.0')}\n`;
-    message += `[4] - ${chalk.underline('Vue3-Laravel10')} ${chalk.grey.italic('~ php v8.1')}\n`;
-    message += `[5] - ${chalk.underline('Vue3-Laravel11')} ${chalk.grey.italic('~ php v8.2 - v8.3')}\n`;
-    message += '=> ';
-
-    readline.question(message, async (answer) => {
-      resolve(parseInt(answer));
+    phpProcess.on('error', () => finish(null));
+    phpProcess.on('close', () => {
+      const match = output.match(/PHP (\d+\.\d+\.\d+)/);
+      finish(match ? `v${match[1]}` : null);
     });
   });
-}
-
-
-export function closeReadline() {
-  readline.close();
 }
