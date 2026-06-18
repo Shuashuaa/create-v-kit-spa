@@ -13,16 +13,12 @@ export function successMessage(sourceVal: string, projectName: string) {
 
   console.log(chalk.green(`\n✔  ${label} boilerplate downloaded\n`));
 
-  // Signature art — created with coffee & passion.
-  console.log(chalk.yellow.bold("              *       ˜"));
-  console.log(chalk.cyan.bold("        ˜                  |"));
-  console.log(chalk.red.bold("    ()    .-.,='``'=.    - o -"));
-  console.log(chalk.yellow.bold("          '=/_       〵    |"));
-  console.log(chalk.cyanBright.bold("       *   |  '=._     )"));
-  console.log(chalk.yellow.bold("           \\      `=../`,        '"));
-  console.log(chalk.redBright.bold("         .   '=.__.=' `='      *"));
-  console.log(chalk.yellow.bold("˜                         +"));
-  console.log(chalk.cyanBright.bold("     O      *        '       .\n"));
+  // Galaxy — created with coffee & passion.
+  console.log(chalk.magenta("     ˚  ·  ⋆   ✦  ·    ˚   ✧   ·"));
+  console.log(chalk.blueBright("   ✧   ·  ˚ ✦  ·  ⋆  ·   ✦  ·  ˚"));
+  console.log(chalk.cyan(" ·  ⋆  ✦  ·  ✺  ") + chalk.whiteBright.bold("★ ✦ ★") + chalk.cyan("  ✺  · ✦  ⋆  ·"));
+  console.log(chalk.blueBright("   ·  ✧  · ✦  ·  ⋆  ·  ✦  ˚  ·  ✧"));
+  console.log(chalk.magenta("      ˚  ·   ✦  ⋆  ·   ✦   ·  ˚\n"));
 
   const steps = [
     `cd ${projectName}`,

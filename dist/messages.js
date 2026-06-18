@@ -17,16 +17,12 @@ function successMessage(sourceVal, projectName) {
     const installCmd = isNpm ? 'npm install' : 'yarn install';
     const runCmd = isNpm ? 'npm run artisan-watch' : 'npm run artisan-dev';
     console.log(chalk_1.default.green(`\n✔  ${label} boilerplate downloaded\n`));
-    // Signature art — created with coffee & passion.
-    console.log(chalk_1.default.yellow.bold("              *       ˜"));
-    console.log(chalk_1.default.cyan.bold("        ˜                  |"));
-    console.log(chalk_1.default.red.bold("    ()    .-.,='``'=.    - o -"));
-    console.log(chalk_1.default.yellow.bold("          '=/_       〵    |"));
-    console.log(chalk_1.default.cyanBright.bold("       *   |  '=._     )"));
-    console.log(chalk_1.default.yellow.bold("           \\      `=../`,        '"));
-    console.log(chalk_1.default.redBright.bold("         .   '=.__.=' `='      *"));
-    console.log(chalk_1.default.yellow.bold("˜                         +"));
-    console.log(chalk_1.default.cyanBright.bold("     O      *        '       .\n"));
+    // Galaxy — created with coffee & passion.
+    console.log(chalk_1.default.magenta("     ˚  ·  ⋆   ✦  ·    ˚   ✧   ·"));
+    console.log(chalk_1.default.blueBright("   ✧   ·  ˚ ✦  ·  ⋆  ·   ✦  ·  ˚"));
+    console.log(chalk_1.default.cyan(" ·  ⋆  ✦  ·  ✺  ") + chalk_1.default.whiteBright.bold("★ ✦ ★") + chalk_1.default.cyan("  ✺  · ✦  ⋆  ·"));
+    console.log(chalk_1.default.blueBright("   ·  ✧  · ✦  ·  ⋆  ·  ✦  ˚  ·  ✧"));
+    console.log(chalk_1.default.magenta("      ˚  ·   ✦  ⋆  ·   ✦   ·  ˚\n"));
     const steps = [
         `cd ${projectName}`,
         installCmd,
