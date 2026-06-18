@@ -5,6 +5,13 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.1] - 2026-06-18
+
+### Changed
+- Redesigned the completion screen. The post-scaffold next steps now render in a
+  framed, numbered box (`@clack/prompts` note), the dev-server URL moved into the
+  closing line, and the signature art and credits were kept but tidied.
+
 ## [1.1.0] - 2026-06-18
 
 A modern, more resilient CLI. Fixes a Windows crash and reworks the prompts
@@ -45,4 +52,5 @@ with [@clack/prompts](https://github.com/bombshell-dev/clack).
 
 - Previous release. Added the generated file name to the installation output.
 
+[1.1.1]: https://github.com/Shuashuaa/create-v-kit-spa/releases/tag/v1.1.1
 [1.1.0]: https://github.com/Shuashuaa/create-v-kit-spa/releases/tag/v1.1.0

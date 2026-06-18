@@ -66,7 +66,7 @@ async function createProject() {
   }
 
   successMessage(template.id, projectName);
-  outro(chalk.green(`${template.label} boilerplate ready 🎉`));
+  outro(chalk.green(`${template.label} ready`) + chalk.dim('  ·  ') + chalk.cyan('http://127.0.0.1:8000'));
 }
 
 createProject().catch((error: any) => {

@@ -70,7 +70,7 @@ function createProject() {
             process.exit(1);
         }
         (0, messages_1.successMessage)(template.id, projectName);
-        (0, prompts_1.outro)(chalk_1.default.green(`${template.label} boilerplate ready 🎉`));
+        (0, prompts_1.outro)(chalk_1.default.green(`${template.label} ready`) + chalk_1.default.dim('  ·  ') + chalk_1.default.cyan('http://127.0.0.1:8000'));
     });
 }
 createProject().catch((error) => {
