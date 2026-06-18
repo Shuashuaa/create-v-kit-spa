@@ -14,11 +14,11 @@ export function successMessage(sourceVal: string, projectName: string) {
   console.log(chalk.green(`\n✔  ${label} boilerplate downloaded\n`));
 
   // Galaxy — created with coffee & passion.
-  console.log(chalk.magenta("     ˚  ·  ⋆   ✦  ·    ˚   ✧   ·"));
-  console.log(chalk.blueBright("   ✧   ·  ˚ ✦  ·  ⋆  ·   ✦  ·  ˚"));
-  console.log(chalk.cyan(" ·  ⋆  ✦  ·  ✺  ") + chalk.whiteBright.bold("★ ✦ ★") + chalk.cyan("  ✺  · ✦  ⋆  ·"));
-  console.log(chalk.blueBright("   ·  ✧  · ✦  ·  ⋆  ·  ✦  ˚  ·  ✧"));
-  console.log(chalk.magenta("      ˚  ·   ✦  ⋆  ·   ✦   ·  ˚\n"));
+  console.log(chalk.gray("     ˚  ·  ⋆   ✦  ·    ˚   ✧   ·"));
+  console.log(chalk.white("   ✧   ·  ˚ ✦  ·  ⋆  ·   ✦  ·  ˚"));
+  console.log(chalk.white(" ·  ⋆  ✦  ·  ✺  ") + chalk.whiteBright.bold("★ ✦ ★") + chalk.white("  ✺  · ✦  ⋆  ·"));
+  console.log(chalk.white("   ·  ✧  · ✦  ·  ⋆  ·  ✦  ˚  ·  ✧"));
+  console.log(chalk.gray("      ˚  ·   ✦  ⋆  ·   ✦   ·  ˚\n"));
 
   const steps = [
     `cd ${projectName}`,

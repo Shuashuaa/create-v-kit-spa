@@ -18,11 +18,11 @@ function successMessage(sourceVal, projectName) {
     const runCmd = isNpm ? 'npm run artisan-watch' : 'npm run artisan-dev';
     console.log(chalk_1.default.green(`\n✔  ${label} boilerplate downloaded\n`));
     // Galaxy — created with coffee & passion.
-    console.log(chalk_1.default.magenta("     ˚  ·  ⋆   ✦  ·    ˚   ✧   ·"));
-    console.log(chalk_1.default.blueBright("   ✧   ·  ˚ ✦  ·  ⋆  ·   ✦  ·  ˚"));
-    console.log(chalk_1.default.cyan(" ·  ⋆  ✦  ·  ✺  ") + chalk_1.default.whiteBright.bold("★ ✦ ★") + chalk_1.default.cyan("  ✺  · ✦  ⋆  ·"));
-    console.log(chalk_1.default.blueBright("   ·  ✧  · ✦  ·  ⋆  ·  ✦  ˚  ·  ✧"));
-    console.log(chalk_1.default.magenta("      ˚  ·   ✦  ⋆  ·   ✦   ·  ˚\n"));
+    console.log(chalk_1.default.gray("     ˚  ·  ⋆   ✦  ·    ˚   ✧   ·"));
+    console.log(chalk_1.default.white("   ✧   ·  ˚ ✦  ·  ⋆  ·   ✦  ·  ˚"));
+    console.log(chalk_1.default.white(" ·  ⋆  ✦  ·  ✺  ") + chalk_1.default.whiteBright.bold("★ ✦ ★") + chalk_1.default.white("  ✺  · ✦  ⋆  ·"));
+    console.log(chalk_1.default.white("   ·  ✧  · ✦  ·  ⋆  ·  ✦  ˚  ·  ✧"));
+    console.log(chalk_1.default.gray("      ˚  ·   ✦  ⋆  ·   ✦   ·  ˚\n"));
     const steps = [
         `cd ${projectName}`,
         installCmd,
